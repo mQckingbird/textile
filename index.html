@@ -1,1 +1,338 @@
 
+<!DOCTYPE html><html class=''>
+<head><meta charset='UTF-8'><link rel="canonical" href="http://" />
+<title>Textile · Donde los libros se construyen</title>
+<link rel='stylesheet' href='stylesheets/font-awesome.css'>
+<link rel='stylesheet' href='stylesheets/textile.css'>
+<link rel="icon" type="image/x-icon" href="textile.ico">
+
+<style class="cp-pen-styles">
+
+@-webkit-keyframes rotate-forever {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes rotate-forever {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-forever {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.loading-spinner {
+  -webkit-animation-duration: 0.75s;
+  -moz-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: rotate-forever;
+  -moz-animation-name: rotate-forever;
+  animation-name: rotate-forever;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  animation-timing-function: linear;
+  height: 30px;
+  width: 30px;
+  border: 8px solid #ffffff;
+  border-right-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+}
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+  margin: -15px 0 -15px;
+}
+</style></head><body>
+<div id="loading" style="width:100%;height:100%;min-width:100%;min-height:100%;background-color: #212121;z-index:9999; position:fixed;">
+<div class="loading-spinner"></div>
+</div>
+<div id='stars'></div>
+<div id='stars2'></div>
+<div id='stars3'></div>
+<div id='title'>
+</div>
+<div id="fullpage">
+     <div class="section" id="section1">
+       
+       <div class="teclado animated" id="js-teclado"></div>
+       <div class="modal animated">
+<img src="textile_logo_app.png" style="width:70px; height: 70px; margin-top:40px">
+  <h1 class="extra" data-shadow='textile.'>
+   
+  </h1>
+   <h2>Todo está en movimiento. Captúralo con palabras.</h2>
+<ul>
+<li>
+    <div class="download linux">
+      <i class="fa fa fa-linux fa-2x"></i>
+      <span class="df">Descargar</span>
+      <span class="dfn">Linux</span>
+    </div>
+  </li>
+  <li>
+    <div class="download android">
+      <i class="fa fa fa-android fa-2x"></i>
+      <span class="df">Próximamente</span>
+      <span class="dfn">Google Play</span>
+    </div>
+  </li>
+  <li>
+    <div class="download apple">
+      <i class="fa fa fa-apple fa-2x"></i>
+      <span class="df">Próximamente</span>
+      <span class="dfn">App Store</span>
+    </div>
+  </li>
+  <li>
+    <div class="download windows">
+      <i class="fa fa fa-windows fa-2x"></i>
+      <span class="df">Próximamente</span>
+      <span class="dfn">Windows</span>
+    </div>
+  </li>
+</ul>
+
+
+</div>
+
+<div id="pulltheshittogether">
+
+<div class="wk">
+  <div class="k">
+    <div class="r">
+      <i data-code=""><span><i class="fa fa-ellipsis-h"></i></span></i>
+      <i data-code=""><span><i class="fa fa-coffee"></i></span></i>
+      <i data-code=""><span><i class="fa fa-pencil"></i></span></i>
+      <i data-code=""><span><i class="fa fa-database"></i></span></i>
+      <i data-code=""><span></span></i>
+      <i data-code=""><span><i class="fa fa-exchange"></i></span></i>
+      <i data-code=""><span><i class="fa fa-book"></i></span></i>
+      <i data-code=""><span><i class="fa fa-eye"></i></span></i>
+      <i data-code=""><span><i class="fa fa-female"></i></span></i>
+      <i data-code=""><span><i class="fa fa-male"></i></span></i>
+    </div>
+    <div class="r">
+      <i data-code=""><span><i class="fa fa-heart"></i></span></i>
+      <i data-code=""><span><i class="fa fa-leaf"></i></span></i>
+      <i data-code=""><span><i class="fa fa-line-chart"></i></span></i>
+      <i data-code=""><span><i class="fa fa-mortar-board"></i></span></i>
+      <i data-code=""><span></span></i>
+      <i data-code=""><span></span></i>
+      <i data-code=""><span></span><i class="fa fa-puzzle-piece"></i></i>
+      <i data-code=""><span><i class="fa fa-recycle"></i></span></i>
+      <i data-code=""><span><i class="fa fa-reorder"></i></span></i>
+      <i data-code=""><span><i class="fa fa-paper-plane"></i></span></i>
+    </div>
+    <div class="r level">
+      <i data-code=""><span></span><b>0.1</b></i>
+      <i data-code=""><span></span><b>PDF</b></i>
+      <i data-code=""><span></span><b>EPUB</b></i>
+      <i data-code=""><span></span><b>TXT</b></i>
+      <i data-code=""><span></span></i>
+      <i data-code=""><span></span><b>HTML</b></i>
+      <i data-code=""><span></span><b>DOCX</b></i>
+      <i data-code=""><span></span></i>
+    </div>
+    <div class="r">
+      <div class="space" data-code="32">
+       ¿Qué es Textile?
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+<footer><div class="links"><a href="#" target="_blank">source</a> / <a href="#" target="_blank">contribuir</a> / <a href="#" target="_blank">historial</a></div>
+<div class="iconlinks">
+  <i class="fa fa-facebook-square"></i> <i class="fa fa-twitter-square"></i> <i class="fa fa-google-plus-square"></i> <i class="fa fa-linkedin-square"></i> <i class="fa fa-rss-square"></i> <i class="fa fa-github-square"></i> <i class="fa fa-git-square"></i>
+</div></footer>
+     </div>
+     <div class="section" id="section0">
+
+     <video data-keepplaying autoplay loop muted id="textilevideo">
+      <source src="textile.webm" type="video/webm">
+    </video>
+    <div id="whatisit">
+      <div class="explain"> <h1 style="text-align:left; width:100%; margin:0;">¿Qué es Textile?</h1>
+       Textile es una herramienta libre para escritores, matemáticos, físicos, químicos, y cualquier persona que quiera publicar un texto con estilo.<br>
+       Atraviesa el tiempo con tus palabras, y tus palabras atravesarán todos tus dispositivos con Textile.
+       Personaliza tus textos, añade imágenes y expresiones matemáticas complejas.
+       Exporta tus trabajos completos o artículos únicos a muchos formatos.<br>
+       Sé un pájaro burlón y arroja tus textos a todas partes del mundo.<br>
+        <p style="padding:10px;"><i class="fa fa-sun-o"></i>  <i class="fa fa-tree"></i> <i class="fa fa-hashtag"></i> </p>
+
+    </div>
+    <div class="container">
+
+    <section id="bird-wrapper">
+        <!--The bird-->
+        <section id="bird">
+            <div class="body">
+                <div class="crest">
+                    <span class="crest-1"></span>
+                    <span class="crest-2"></span>
+                </div>
+                <div class="head">
+                    <span class="eye"></span>
+                    <div class="mouth">
+                        <span class="peak-top"></span>
+                        <span class="peak-bottom"></span>
+                        <span class="nouse"></span>
+                        <div class="fish">
+                            <span class="body-left"></span>
+                            <span class="body-right"></span>
+                        </div>
+                    </div>
+                    <div class="head-lines">
+                        <span class="head-line-1"></span>
+                    </div>
+                </div>
+                <div class="chest"></div>
+                <div class="feathers">
+                    <span class="feather-1"></span>
+                    <span class="feather-2"></span>
+                    <span class="feather-3"></span>
+                </div>
+                <div class="wings">
+                    <div class="wing-dots">
+                        <div class="small dots-container">
+                            <span class="small"></span>
+                            <span class="small"></span>
+                            <span class="small"></span>
+                        </div>
+                       <div class="big-dots-container">
+                           <span class="big"></span>
+                           <span class="big"></span>
+                           <span class="big"></span>
+                           <span class="big"></span>
+                       </div>
+                    </div>
+                </div>
+
+                <div class="legs"></div>
+                <div class="feet">
+                    <div class="toes"></div>
+                </div>
+            </div>
+        </section>
+
+        <!--Rock-->
+        <div id="big-rock">
+            <div class="rock-1"></div>
+            <div class="rock-2"></div>
+            <div class="rock-3"></div>
+
+            <!--Rock grass-->
+            <span class="rock-grass grass-1 left"></span>
+            <span class="rock-grass grass-2 left"></span>
+            <span class="rock-grass grass-3 left"></span>
+            <span class="rock-grass grass-1 right"></span>
+            <span class="rock-grass grass-2 right"></span>
+            <span class="rock-grass grass-3 right"></span>
+        </div>
+    </section>
+    <span class="grass"></span>
+</div>
+
+    </div>
+</div>
+     <div class="section">
+<div class="showcase">
+      <h1>Offline</h1>
+  <p>Textile funciona offline.<br> Su base de datos, diseñada para permitir sincronización entre dispositivos, nos abrió las puertas a 5 formas de sincronización diferentes, donde sólo una de ellas requiere conexión a internet.<br>
+   Tus datos podrán sincronizarse a través de Wi-Fi, Bluetooth, NFC, archivos de database y la nube, donde la magia apenas comienza.
+ </p>
+</div>
+  <div class="mockup_wrap">
+    <div class="md-macbook-pro md-glare">
+      <div class="md-lid">
+        <div class="md-camera"></div>
+        <div class="md-screen">
+          <img src="desktop.png">
+        </div>
+      </div>
+      <div class="md-base"></div>
+    </div>
+
+    <div class="md-ipad md-white-device md-glare right-mockup">
+      <div class="md-body">
+        <div class="md-front-camera"></div>
+        <div class="md-screen">
+          <img src="tablet.png">
+        </div>
+        <button class="md-home-button"></button>
+      </div>
+    </div>
+
+    <div class="md-iphone-5 md-white-device md-glare left-mockup">
+      <div class="md-body">
+        <div class="md-buttons"></div>
+        <div class="md-front-camera"></div>
+        <div class="md-top-speaker"></div>
+        <div class="md-screen">
+          <img src="phone.png">
+        </div>
+        <button class="md-home-button"></button>
+      </div>
+    </div>
+  </div>
+
+     <!--
+          -->
+     </div>
+     <div class="section">
+
+     </div>
+</div>
+
+</body>
+<script src='libs/one.js'></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+<script src='libs/two.js'></script>
+<script src='libs/three.js'></script>
+
+</html>
