@@ -1770,3 +1770,491 @@ a:hover {
 .md-ipad {
   font-size: 1em;
 }
+
+.grass {
+    background: #7ebc6f;
+}
+.rock {
+    background: #b1aaa4;
+}
+
+.head, .wings {
+    background: rgb(255, 255, 255);
+}
+
+.container {
+    height: 510px;
+    position: absolute;
+    overflow: hidden;
+    width: 60%;
+    bottom: 0;
+    right:0;
+}
+
+  
+
+
+#bird-wrapper {
+    height: 510px;
+    width: 765px;
+    position: absolute;
+    /* top: 0; */
+    left: 50%;
+    bottom: 0;
+    margin-left: -334px;
+}
+
+/*--- Bird ---*/
+#bird {
+    position: absolute;
+    bottom: 45px;
+    width: 433px;
+    height: 306px;
+    left: 148px;
+}
+
+
+.head {
+    position: absolute;
+    top: 7px;
+    left: 110px;
+    height: 80px;
+    width: 107px;
+    transform: rotate(43deg);
+    border-radius: 63% 0 0 40%;
+}
+
+.head .eye {
+    position: absolute;
+    top: 31px;
+    left: 20px;
+    width: 9px;
+    height: 9px;
+    background: #3f2a27;
+    border-radius: 50%;
+}
+
+.crest {
+    position: absolute;
+    top: 4px;
+    left: 139px;
+    height: 26px;
+    width: 74px;
+    border-top-left-radius: 18px;
+    overflow: hidden;
+}
+
+.crest .crest-1,
+.crest .crest-2 {
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-color: rgba(255, 255, 255, 0.06) transparent transparent transparent;
+    border-style: solid;
+    border-width: 14px 27px 0px 37px;
+    z-index: -5;
+    display: block;
+}
+.crest .crest-1 {
+    left: 11px;
+    top: 0px;
+}
+
+.crest .crest-2 {
+    left: 11px;
+    top: 12px;
+}
+
+.head .head-lines {
+    position: absolute;
+    top: 31px;
+    left: 29px;
+    height: 31px;
+    width: 57px;
+    transform: rotate(2deg);
+}
+
+.head-lines > span {
+    display: block;
+    width: 100%;
+    height: 50%;
+    border-radius: 60% 0 0 0;
+    transform: skew(-20deg);
+}
+
+.head-lines .head-line-1 {
+    background: white;
+    margin-left: 19px;
+}
+
+
+.head .mouth {
+    position: absolute;
+    top: 55px;
+    left: -93px;
+    width: 140px;
+    height: 65px;
+    transform: rotate(-43deg);
+}
+
+.head .mouth .nouse {
+    position: absolute;
+    top: 33px;
+    left: 101px;
+    width: 0;
+    height: 0;
+    border-radius: 29%;
+    border-right: 14px solid #5b4035;
+    border-top: 4px solid transparent;
+    border-bottom: 3px solid transparent;
+    z-index: 10;
+}
+
+.head .mouth .peak-top {
+    position: absolute;
+    border-color: transparent #3e2b24 transparent transparent;
+    border-style: solid;
+    border-width: 16px 124px 4px 0px;
+    transform: skew(24deg);
+    top: 27px;
+    left: 4px;
+    z-index: 5;
+}
+
+.head .mouth .peak-bottom {
+    position: absolute;
+    border-color: transparent #5b4035 transparent transparent;
+    border-style: solid;
+    border-width: 0px 125px 19px 0px;
+    transform: skew(-19deg);
+    top: 46px;
+    left: 4px;
+    z-index: -1;
+}
+
+.head .mouth .fish {
+    position: absolute;
+    top: 37px;
+    left: 47px;
+    width: 47px;
+    height: 67px;
+}
+
+.fish .body-left,
+.fish .body-right {
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-bottom-width: 0;
+    border-style: solid;
+}
+
+.fish .body-left {
+    border-width: 100px 0px 0px 20px;
+    top: 3px;
+    left: 5px;
+    border-color: rgba(255, 255, 255, 0.61) transparent;
+}
+
+.head .mouth .fish:before,
+.head .mouth .fish:after {
+    position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        z-index: 20;
+}
+
+.fish .body-right {
+    border-width: 100px 20px 0px 0px;
+    top: 3px;
+    left: 24px;
+    border-color: rgba(255,255,255,.6) transparent;
+}
+
+.wings {
+    border-radius: 511px 0 1600px 355px / 511px 0 800px 332px;
+    width: 276px;
+    height: 120px;
+    position: absolute;
+    top: 108px;
+    left: 141px;
+    transform:rotate(51deg) skew(-6deg);
+    border-style:solid;
+    border-color: #171717
+    ;
+    border-width: 0px 10px 13px 0px;
+}
+
+.wings .wing-dots {
+    position: absolute;
+    top: 7px;
+    width: 149px;
+    height: 44px;
+    left: 35px;
+    text-align: center;
+}
+
+.wings .wing-dots span {
+    display: inline-block;
+    border-radius: 40%;
+    background: #000000;
+}
+.wings span.small {
+    width: 8px;
+    height: 8px;
+    margin: 0 11px;
+}
+.wings span.big {
+    width: 10px;
+    height: 10px;
+    margin: 0 11px;
+}
+
+
+
+.feathers {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    top: 147px;
+    left: 281px;
+}
+
+.feathers > span {
+    position: absolute;
+    background: rgba(51, 33, 27, 0.68);
+}
+
+.feathers .feather-1 {
+    width: 100px;
+    height: 60px;
+    border-bottom-right-radius: 100%;
+    left: 30px;
+    top: 33px;
+}
+
+.feathers .feather-2,
+.feathers .feather-3 {
+    height: 45px;
+    width: 127px;
+    transform: rotate(54deg);
+    border-radius: 0 0 149% 0px / 0 0 146% 13px;
+}
+
+.feathers .feather-2 {
+    top: 75px;
+    left: 28px;
+}
+
+.feathers .feather-3 {
+    top: 83px;
+    left: -5px;
+    height: 30px;
+    width: 100px;
+}
+
+.legs {
+    position: absolute;
+    top: 161px;
+    height: 92px;
+    width: 100px;
+    background: rgba(51, 33, 27, 0.68);
+    left: 230px;
+    transform: skewX(-12deg) rotate(43deg);
+    z-index: -2;
+}
+
+.feet {
+    position: absolute;
+    top: 284px;
+    left: 226px;
+    width: 50px;
+    height: 8px;
+    background: rgba(51, 33, 27, 0.68);
+    z-index: -5;
+    transform: rotate(-44deg);
+}
+
+.feet .toes {
+    width: 95px;
+    height: 6px;
+    background: rgba(51, 33, 27, 0.68);
+    transform: rotate(58deg);
+    position: absolute;
+    top: -5px;
+    left: -52px;
+}
+
+.toes:before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    height: 10px;
+    width: 10px;
+    top: 4px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: -1px -4px 0px black;
+}
+
+.toes:after {
+    content: "";
+    position: absolute;
+    right: -3px;
+    height: 10px;
+    width: 10px;
+    top: 4px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 3px -3px 0px black;
+}
+
+.chest {
+    position: absolute;
+    width: 245px;
+    height: 123px;
+    background: #0E0E0E;
+    border-radius: 50% 100% 0 0;
+    z-index: -1;
+    left: 136px;
+    top: 108px;
+    border-radius: 520px 0 1600px 1158px / 520px 0 1600px 903px;
+    transform: rotate(48deg);
+}
+
+
+
+
+
+/*--- Rock ---*/
+#bird-wrapper #big-rock {
+    position: absolute;
+    bottom: -5px;
+    width: 276px;
+    height: 75px;
+    left: 50%;
+    margin-left: -153px;
+}
+
+#big-rock .rock-1 {
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-bottom: 13px solid #272727;
+    position: relative;
+    top: 25px;
+    left: 73px;
+    border-top: 0;
+}
+
+#big-rock .rock-2 {
+    position: absolute;
+    top: 31px;
+    width: 50px;
+    height: 50px;
+    transform: skew(45deg);
+    left: 39px;
+    border-left: rgba(56, 56, 56, 0.4);
+    background: rgba(29, 29, 29, 0.9);
+}
+
+#big-rock .rock-2:before {
+    content: "";
+    position: absolute;
+    left: -49px;
+    height: 20px;
+    width: 40px;
+    background: #313131;
+    top: 19px;
+    border-top: 4px solid #383533;
+}
+
+#big-rock .rock-2:after {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: 7px;
+    left: 86px;
+    border-style: solid;
+    border-width: 0 47px 35px 53px;
+    border-color: rgb(70, 70, 70);
+}
+
+#big-rock .rock-1:before {
+    content: "";
+    position: absolute;
+    border: 39px solid transparent;
+    border-bottom: 20px solid #272727;
+    top: -48px;
+    left: -81px;
+    transform: rotate(-14deg);
+}
+
+#big-rock .rock-1:after {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 13px;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top: 70px solid #464646;
+}
+
+#big-rock .rock-grass {
+    border-color: transparent transparent rgba(0, 0, 0, 0.62) transparent;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    border-width: 0 13px 80px 13px;
+    display: block;
+    position: absolute;
+}
+
+#big-rock .rock-grass.left {
+    transform: rotate(-41deg);
+}
+
+#big-rock .rock-grass.right {
+    transform: rotate(41deg);
+}
+
+#big-rock .grass-1 {
+    top: 13px;
+}
+
+#big-rock .grass-1.left {
+    left: -17px;
+}
+
+#big-rock .grass-1.right {
+    right: -17px;
+}
+
+#big-rock .grass-2 {
+    top: 10px;
+    border-width: 0px 12px 80px 12px;
+}
+
+#big-rock .grass-2.left {
+    left: -41px;
+}
+
+#big-rock .grass-2.right {
+    right: -41px;
+}
+
+#big-rock .grass-3 {
+    top: 33px;
+    border-width: 0 7px 80px 12px;
+}
+
+#big-rock .grass-3.left {
+    left: -39px;
+}
+
+#big-rock .grass-3.right {
+    right: -39px;
+}
