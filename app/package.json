@@ -1,9 +1,16 @@
 {
-  "name": "Textile",
+  "name": "textile",
   "productName": "Textile",
   "description": "Save your work across time.",
   "version": "0.0.1",
-  "author": "Matías",
+  "author": {
+    "name": "Matías",
+    "email": "matiusic@gmail.com"
+  },
+  "contributors": {
+    "name": "Mati",
+    "email": "matiusic@gmail.com"
+  },
   "copyright": "© 2016 Textile",
   "main": "background.js",
   "dependencies": {
@@ -20,5 +27,24 @@
   },
   "devDependencies": {
     "debug-menu": "^0.4.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matikbird/textiled.git"
+  },
+  "keywords": [
+    "write",
+    "words",
+    "multiplatform",
+    "app",
+    "software",
+    "books",
+    "articles",
+    "work"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matikbird/textiled/issues"
+  },
+  "homepage": "https://github.com/matikbird/textiled#readme"
 }

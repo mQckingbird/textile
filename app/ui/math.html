@@ -2,7 +2,7 @@
   <form>
     <md-toolbar>
       <div class="md-toolbar-tools">
-        <h2>Matemática</h2>
+        <h2>{{ 'MATH' | translate }}</h2>
         <span flex></span>
     
        <md-button class="md-icon-button">
@@ -15,7 +15,7 @@
     <md-dialog-content>
     
      <md-input-container class="md-block" style="margin: 25px 10px 10px 10px;">
-    <label>Escribe tu fórmula</label>
+    <label>{{ 'WRITE_YOUR_MATH' | translate }}a</label>
     <textarea ng-model="math.expression" required style="min-height:40px"></textarea>
                  </md-input-container>
 
@@ -25,12 +25,12 @@
     </perfect-scrollbar>
     <md-dialog-actions layout="row" style="padding-left:5px;">
       <md-button class="md-primary md-raised">
-        Cancelar
+        {{ 'CANCEL' | translate }}
       </md-button>
       <span flex></span>
 
       <md-button class="md-default md-raised" ng-click="generarmath()" style="margin-right:0px;" md-autofocus>
-       Agregar expresión
+       {{ 'ADD_MATH' | translate }}
       </md-button>
     </md-dialog-actions>
   </form>

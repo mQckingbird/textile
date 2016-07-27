@@ -23,7 +23,33 @@
           <span class="md-caption" style="padding:0;">{{ArrayTextile.email}}</span>
         </div>
         <span flex></span>
+         <md-menu md-position-mode="target-right target" style="margin:0 !important;">
+                                  <md-button aria-label="Languages" ng-click="$mdOpenMenu($event)" class="md-icon-button" style="margin:0;">
+                                               <ng-md-icon md-menu-origin icon="translate" style="width: 24px; height: 24px;"></ng-md-icon>
+                                   </md-button>
+                            <md-menu-content width="4">
+                              <md-menu-item ng-click="changeLanguage('es')">
+                                <md-button ng-click="ctrl.announceClick($index)" aria-label="ES">
+                                    <div layout="row" flex>
+                                      <p flex>{{ 'LANGUAGE_ES' | translate }}</p>
+                                      <ng-md-icon md-menu-align-target icon="check" style="width: 24px; height: 24px;" ng-show="ArrayTextile.lang == 'es'"></ng-md-icon>
+                              
+                                    </div>
+                                </md-button>
+                              </md-menu-item>
+                              <md-menu-item>
+                                <md-button ng-click="changeLanguage('en')" aria-label="EN">
+                                    <div layout="row" flex>
+                                      <p flex>{{ 'LANGUAGE_EN' | translate }}</p>
+                                      <ng-md-icon md-menu-align-target icon="check" style="width: 24px; height: 24px;" ng-show="ArrayTextile.lang == 'en'"></ng-md-icon>
+                                
+                                    </div>
+                                </md-button>
+                              </md-menu-item>
+                            </md-menu-content>
+                          </md-menu>
         <md-button class="md-icon-button" aria-label="Preferencias" ng-click="configuretextile()">
+              
             <ng-md-icon icon="settings"></ng-md-icon>
         </md-button>
       </div>
@@ -34,7 +60,7 @@
       <md-list class="appsidenav" >
      <!-- loadchaps(project._id) -->
         <md-list-item ng-click="loadchaps('default')" ng-class="{ active: isSet('default') }">
-          <p class="md-subheader md-primary">Archivos</p>
+          <p class="md-subheader md-primary">{{ 'FILES' | translate }}</p>
           <span flex></span>
           <ng-md-icon icon="chevron_right" style="margin-right:0 !important;"></ng-md-icon>
         </md-list-item>
@@ -51,7 +77,7 @@
 
         <md-list-item ng-show="isSet(project._id)" ng-click="settingsproj(project)" id="expanditem">
            <ng-md-icon icon="filter_tilt_shift"></ng-md-icon>
-          <p class="md-body-2">Configuración</p>
+          <p class="md-body-2">{{ 'SETTINGS' | translate }}</p>
         </md-list-item>
 
       </md-list>
@@ -61,7 +87,7 @@
 
     <div class="wannawrite">
      <md-button ng-click="newProject()" class="md-raised newprojectbutton" style="width:95%">
-           <ng-md-icon icon="group_work"></ng-md-icon> Nuevo proyecto
+           <ng-md-icon icon="group_work"></ng-md-icon> {{ 'NEW_PROJECT' | translate }}
           </md-button>
           </div>
   </md-sidenav>
@@ -86,8 +112,8 @@
                     <div class="bubble"></div>
                     <div class="main">
                       <h1><ng-md-icon icon="now_widgets" size="40"></ng-md-icon></h1>
-                      <p>Tu árbol de artículos está vacío. <br/>¿Qué tal si creas uno?</p>
-                      <md-button class="md-primary md-raised" ng-click="addTab()">Nuevo</md-button>
+                      <p>{{ 'TREE_EMPTY' | translate }}<br>{{'HOW_ABOUT_CREATE_ONE' | translate }}</p>
+                      <md-button class="md-primary md-raised" ng-click="addTab()">{{ 'NEW' | translate }}</md-button>
                      </div>
                      </div>
                   </div>
@@ -120,7 +146,7 @@
                               <md-menu-item ng-click="PDF_Single()">
                                 <md-button ng-click="ctrl.announceClick($index)" aria-label="PDF">
                                     <div layout="row" flex>
-                                      <p flex>Artículo como PDF</p>
+                                      <p flex>{{ 'ARTICLE_AS_PDF' | translate }}</p>
                                       <ng-md-icon md-menu-align-target icon="picture_as_pdf" style="width: 24px; height: 24px;"></ng-md-icon>
                               
                                     </div>
@@ -129,7 +155,7 @@
                               <md-menu-item>
                                 <md-button ng-click="EPUB_Single()" aria-label="EPUB">
                                     <div layout="row" flex>
-                                      <p flex>Artículo como EPUB</p>
+                                      <p flex>{{ 'ARTICLE_AS_EPUB' | translate }}</p>
                                       <ng-md-icon md-menu-align-target icon="view_carousel" style="width: 24px; height: 24px;"></ng-md-icon>
                                 
                                     </div>
@@ -138,7 +164,7 @@
                               <md-menu-item>
                                 <md-button ng-click="TXT_Single()" aria-label="txt">
                                     <div layout="row" flex>
-                                      <p flex>Artículo como TXT</p>
+                                      <p flex>{{ 'ARTICLE_AS_TXT' | translate }}</p>
                                       <ng-md-icon md-menu-align-target icon="text_format" style="width: 24px; height: 24px;"></ng-md-icon>
                           
                                     </div>
@@ -147,7 +173,7 @@
                               <md-menu-item>
                                 <md-button ng-click="HTML_Single()" aria-label="html">
                                     <div layout="row" flex>
-                                      <p flex>Artículo como HTML</p>
+                                      <p flex>{{ 'ARTICLE_AS_HTML' | translate }}</p>
                                       <ng-md-icon md-menu-align-target icon="web" style="width: 24px; height: 24px;"></ng-md-icon>
                                 
                                     </div>
@@ -213,6 +239,7 @@
 
   <script src="express/pouchdb.min.js"></script> 
   <script src="express/pouchdb.find.js"></script><script>
+  
     require('./express/angular.js');
     require('./express/angular-pouch.js');
     require('./node_modules/angular-perfect-scrollbar-2/dist/index.js');
@@ -221,6 +248,8 @@
     require('./express/angular-messages.min.js');
     require('./express/angular-material.js');
     require('./express/angular-material-icons.min.js');
+    require('./express/angular-translate.min.js');
+    require('./express/translate.js');
     require('./express/funciones.js');
     require('./express/redact.min.js');
 </script>

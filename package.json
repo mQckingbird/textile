@@ -1,4 +1,6 @@
 {
+  "author": "Matias",
+  "email": "matiusic@gmail.com",
   "build": {
     "appId": "com.Textile.App",
     "app-category-type": "words.time",

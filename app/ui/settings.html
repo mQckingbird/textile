@@ -10,13 +10,13 @@
       <md-list>
          <md-list-item ng-click="setTab(1)" ng-class="{ active: isSet(1) }">
            <ng-md-icon icon="settings_applications"></ng-md-icon>
-          <p class="md-body-2">Configuración</p>
+          <p class="md-body-2">{{ 'SETTINGS' | translate }}</p>
           <span flex></span>
           <ng-md-icon icon="chevron_right"></ng-md-icon>
         </md-list-item>
         <md-list-item ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
            <ng-md-icon icon="save"></ng-md-icon>
-          <p class="md-body-2">Exportar</p>
+          <p class="md-body-2">{{ 'EXPORT' | translate }}</p>
           <span flex></span>
           <ng-md-icon icon="chevron_right"></ng-md-icon>
         </md-list-item>
@@ -27,18 +27,18 @@
   <md-content flex class="md-padding settingsproject">
         <div ng-show="isSet(1)">
   
-           <h1>Preferencias</h1>
-           <p class="absolutemargin">Configuración de proyecto</p>
+           <h1>{{ 'PREFERENCES' | translate }}</h1>
+           <p class="absolutemargin">{{ 'CONF_PROJECT' | translate }}</p>
                        <md-input-container class="md-block">
                    <input ng-model="dialogData.title" type="text" placeholder="Título de proyecto" ng-required="true" ng-change="SetIn('title')" id="title">
                  </md-input-container>
                  <md-input-container class="md-block">
-    <label>Descripción</label>
+    <label>{{ 'DESCRIPTION' | translate }}</label>
     <textarea ng-model="dialogData.descripcion" required md-maxlength="150" style="min-height:120px" ng-change="SetIn('descripcion')" id="descripcion"></textarea>
                  </md-input-container>
 <md-input-container class="md-block">
        <md-button class="md-default md-raised" ng-click="trashproject(dialogData)" >
-          Eliminar proyecto
+          {{ 'DELETE_PROJECT' | translate }}
       </md-button>
     </md-input-container>
    
@@ -46,8 +46,8 @@
 
         <div ng-show="isSet(3)">
 
-          <h1>Exportar</h1>
-          <p class="absolutemargin">Lleva tu trabajo a cualquier plataforma</p>
+          <h1>{{ 'EXPORT' | translate }}</h1>
+          <p class="absolutemargin">{{ 'EXPORT_SUBTITLE' | translate }}</p>
              <md-list>
 
    <md-list-item class="md-3-line" style="margin-top:10px;">
@@ -55,7 +55,7 @@
         <div class="md-list-item-text">
           <h3>PDF</h3>
           <p>
-            Formato portable de documento digital
+           {{ 'PDF_WHAT' | translate }}
           </p>
         </div>
         <md-divider inset=""></md-divider>
@@ -69,7 +69,7 @@
         <div class="md-list-item-text">
           <h3>EPUB</h3>
           <p>
-            Formato estandarizado de código abierto
+            {{ 'EPUB_WHAT' | translate }}
           </p>
         </div>
         <md-divider inset=""></md-divider>
@@ -82,7 +82,7 @@
         <div class="md-list-item-text">
           <h3>TXT</h3>
           <p>
-            Formato de texto plano multiplataforma
+            {{ 'TXT_WHAT' | translate }}
           </p>
         </div>
         <md-divider inset=""></md-divider>
@@ -95,7 +95,7 @@
         <div class="md-list-item-text">
           <h3>HTML</h3>
           <p>
-            Formato de etiquetas para elaboración de páginas web
+            {{ 'HTML_WHAT' | translate }}
           </p>
         </div>
         <md-divider inset=""></md-divider>
@@ -109,7 +109,7 @@
         <div class="md-list-item-text">
           <h3>Docx</h3>
           <p>
-            Compatible con MS Office
+            {{ 'DOCX_WHAT' | translate }}
           </p>
         </div>
         <md-divider inset=""></md-divider>
@@ -122,7 +122,7 @@
         <div class="md-list-item-text">
           <h3>EPUB 3</h3>
           <p>
-            Nuevo formato EPUB con soporte HTML5/TTS/...
+            {{ 'EPUB3_WHAT' | translate }}
           </p>
         </div>
         <md-divider inset=""></md-divider>
