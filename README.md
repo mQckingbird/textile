@@ -17,3 +17,7 @@ cd app
 npm install
 npm start
 ```
+# Who the fuck did this?
+Well, my name is Matías and I just wanted to start with a solid base, and adventure into the wild deep water.
+Wanna join and contribute? This software is far, very far from being mine. I really see it bigger than me.
+I could use some help (:)
