@@ -1,0 +1,115 @@
+<div layout="vertical" ng-controller="ConfigureTextile" layout-fill style="height: 100vh;">
+<div class='blur-modal' layout="row" layout-fill flex>
+
+ <section layout="row" role="main" flex>
+      <md-sidenav class="md-sidenav-left md-whiteframe-z2 settingsnav" role="sidenav" md-component-id="left" md-is-locked-open="$mdMedia('gt-xs')" style="overflow:hidden;" flex="33">
+  
+    <md-content role="navigation" style="background-color: transparent;">
+
+
+      <md-list>
+         <md-list-item ng-click="setTab(1)" ng-class="{ active: isSet(1) }">
+           <ng-md-icon icon="adjust"></ng-md-icon>
+          <p class="md-body-2">Tu</p>
+          <span flex></span>
+          <ng-md-icon icon="chevron_right"></ng-md-icon>
+        </md-list-item>
+        <md-list-item ng-click="setTab(2)" ng-class="{ active: isSet(2) }">
+           <ng-md-icon icon="storage"></ng-md-icon>
+          <p class="md-body-2">Bases de datos</p>
+          <span flex></span>
+          <ng-md-icon icon="chevron_right"></ng-md-icon>
+        </md-list-item>
+        <md-list-item ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
+           <ng-md-icon icon="insert_emoticon"></ng-md-icon>
+          <p class="md-body-2">Acerca de</p>
+          <span flex></span>
+          <ng-md-icon icon="chevron_right"></ng-md-icon>
+        </md-list-item>
+      </md-list>
+
+    </md-content>
+  </md-sidenav> 
+  <md-content flex class="md-padding settingsproject">
+        <div ng-show="isSet(1)">
+  
+                         <h1>Configuración</h1>
+                         <p class="absolutemargin">Comportamiento de la aplicación</p>
+                           <md-input-container class="md-block">
+                           <input ng-model="ArrayTextile.author" type="text" placeholder="Autor" ng-required="true" ng-change="set('author')" id="author">
+                           <p class="hint">Será incluído en tu exportación antes del título y descripción del proyecto.</p>
+                          </md-input-container>
+                          <md-input-container class="md-block">
+                           <input ng-model="ArrayTextile.email" type="text" placeholder="E-mail" ng-change="set('email')" id="email">
+                            <p class="hint">Opcional. Dejalo en blanco si no quieres que sea parte del resultado final.</p>
+                          </md-input-container>
+                          <hr>
+                           <md-input-container class="md-block">
+                           Carpeta de almacenamiento
+                           <div layout="row" flex>
+                                <input id="fileInput" type="file" class="ng-hide">
+                                <md-input-container flex="90" style="margin:0;">
+                                  <input class="inputselect" type="text" ng-model="ArrayTextile.path" class="seleccionar-path" disabled >
+                          
+                                </md-input-container>
+                                <span flex></span>
+                                <div>
+                                  <md-button ng-click="selectDir()" class="md-fab md-mini" style="margin-top:-5px;">
+                                   <ng-md-icon icon="attachment"></ng-md-icon>
+                                  </md-button>
+                                </div>
+                              </div>
+                              </md-input-container>
+                
+   
+          </div>
+      <div ng-show="isSet(2)">
+          <h1>Bases de datos</h1>
+          <p class="absolutemargin">Administra tu contenido</p>
+           <div style="height: calc(100vh - 90px); overflow:hidden;">
+          
+               <perfect-scrollbar class="scroll-wrapper" opts="scrollopts">
+                    <md-input-container class="md-block">
+                        <md-button class="md-default md-raised" ng-click="cleaningDB()" >
+                          Liberar espacio
+                       </md-button>
+                     </md-input-container>
+                     <md-input-container class="md-block">
+                        <md-button class="md-default md-raised" ng-click="destroyeverything()" >
+                          Destruir base de datos
+                       </md-button>
+                     </md-input-container>
+                
+                      </perfect-scrollbar>
+   
+
+
+          
+      </div>
+    </div>
+
+       <div ng-show="isSet(3)">
+          <h1>Acerca de Textile</h1>
+           <div style="height: calc(100vh - 105px); overflow:hidden;">
+          
+             <perfect-scrollbar class="scroll-wrapper" opts="scrollopts">
+                 Tus datos no sólo atravesarán el tiempo, también tus dispositivos.<br>
+                 Textile es una opción libre, en activo desarrollo por la comunidad.<br>
+                 <hr>
+                 Ten en cuenta que éste software aún está en un estado de pruebas (aún no sabemos si podemos definirlo así), por lo que pueden aparecer errores. No te preocupes, todos serán solucionados.
+                 <hr>
+                 <img src="graph/textile_logo_app.png" style="width:50px; height:50px; float:right">
+                 Version 0.1 (Early Alpha)<br>
+                 <i class="fa fa-code"></i> by Mati with a lot of <i class="fa fa-coffee"></i>
+              </perfect-scrollbar>
+   
+
+
+          
+      </div>
+    </div>
+      </md-content>
+    </section>
+
+</div>
+</div>

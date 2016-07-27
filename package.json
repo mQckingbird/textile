@@ -1,0 +1,50 @@
+{
+  "build": {
+    "appId": "com.Textile.App",
+    "app-category-type": "words.time",
+    "win": {
+      "target": ["nsis"],
+      "icon": "resources/windows/icon.ico"
+    },
+    "nsis": {
+      "oneClick": true,
+      "installerHeaderIcon": "resources/windows/setup-icon.ico"
+    },
+    "mac": {
+      "icon": "resources/osx/icon.icns"
+    },
+    "dmg": {
+      "icon": "resources/osx/dmg-icon.icns",
+      "background": "resources/osx/dmg-background.png"
+    }
+  },
+  "directories": {
+    "buildResources": "resources",
+    "app": "build"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "electron-builder": "^5.12.1",
+    "electron-mocha": "^2.0.0",
+    "electron-prebuilt": "^1.0.1",
+    "fs-jetpack": "^0.9.0",
+    "gulp": "^3.9.0",
+    "gulp-batch": "^1.0.5",
+    "gulp-less": "^3.0.3",
+    "gulp-plumber": "^1.1.0",
+    "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.3.5",
+    "q": "^1.4.1",
+    "rollup": "^0.26.3",
+    "yargs": "^4.2.0"
+  },
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "build": "gulp build",
+    "prerelease": "gulp build --env=production",
+    "release": "build --x64 --publish never",
+    "start": "gulp start",
+    "pretest": "gulp build --env=test",
+    "test": "electron-mocha build --renderer"
+  }
+}

@@ -1,0 +1,37 @@
+<md-dialog aria-label="Math"  ng-cloak flex="55" style="overflow:hidden;">
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Matemática</h2>
+        <span flex></span>
+    
+       <md-button class="md-icon-button">
+        
+          <ng-md-icon icon="cancel" ng-click="closeDialog()"></ng-md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <perfect-scrollbar>
+    <md-dialog-content>
+    
+     <md-input-container class="md-block" style="margin: 25px 10px 10px 10px;">
+    <label>Escribe tu fórmula</label>
+    <textarea ng-model="math.expression" required style="min-height:40px"></textarea>
+                 </md-input-container>
+
+    <div id="mathexp"><div class="mathandbeyond" mathjax-bind="math.expression"></div></div>
+
+    </md-dialog-content>
+    </perfect-scrollbar>
+    <md-dialog-actions layout="row" style="padding-left:5px;">
+      <md-button class="md-primary md-raised">
+        Cancelar
+      </md-button>
+      <span flex></span>
+
+      <md-button class="md-default md-raised" ng-click="generarmath()" style="margin-right:0px;" md-autofocus>
+       Agregar expresión
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>
