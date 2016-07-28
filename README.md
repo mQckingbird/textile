@@ -60,8 +60,8 @@ Currently, Textile can deploy your articles or complete tree of project into:
 - EPUB3
 
 # Sync
-Even though our Android & iOS app's are not ready, we're working hard so you can see it yourself.
-Database NoSQL [PouchDB](https://github.com/pouchdb/pouchdb) & [CouchDB](http://couchdb.apache.org/)
+Even though our Android & iOS app's are not ready, we're working hard so you can see it yourself.<br>
+Database NoSQL [PouchDB](https://github.com/pouchdb/pouchdb) & [CouchDB](http://couchdb.apache.org/).
 
 # Privacy
 We do not track nor sends information to anywhere.
