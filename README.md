@@ -46,13 +46,34 @@ $ npm run release -- «platform»
 Textile supports **English** and **Spanish** by default.
 We are seeking for help to anyone who wanna help us translating just a few lines.
 
+# Math
+Yes, we do like science. Mostly the science which requires a lot of math. Oh boy, what's out there it's mindblowing, all thanks to math.
+Textile supports LaTeX, you can write the mathmatical expression in realtime ([I uploaded a repo about this](https://github.com/matikbird/mathjax-atom-directive) and [this guys (mathjax-electron)](https://github.com/nteract/mathjax-electron/) and MathJax helped me a lot to achieve this).
+
+# Export
+Currently, Textile can deploy your articles or complete tree of project into:
+- PDF
+- EPUB
+- TXT
+- HTML
+- DOCX
+- EPUB3
+
+# Sync
+Even though our Android & iOS app's are not ready, we're working hard so you can see it yourself.
+Database NoSQL [PouchDB](https://github.com/pouchdb/pouchdb) & [CouchDB](http://couchdb.apache.org/)
+
 # Privacy
 We do not track nor sends information to anywhere.
 Your work it's safe out of the line.
 
 # Contributors
-- Mati (matiusic@gmail.com) - Programming, structure, design, ... (if anything goes wrong, it's totally my fault)<br>
 - Melissa Cronenbold - Design, social network, ...
+- Mati (matiusic@gmail.com) - Programming, structure, design, ... (if anything goes wrong, it's totally my fault)
 
 # License
 GPL.
+
+# Final words
+Thanks.
+You all rock.
