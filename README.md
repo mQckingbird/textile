@@ -50,6 +50,9 @@ We are seeking for help to anyone who wanna help us translating just a few lines
 We do not track nor sends information to anywhere.
 Your work it's safe out of the line.
 
+# Contributors
+Mati (matiusic@gmail.com) - Programming, structure, design, ...
+Mel Cronenbold - Design, social network, ...
 
 # License
 GPL.
