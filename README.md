@@ -68,7 +68,6 @@ We do not track nor sends information to anywhere.
 Your work it's safe out of the line.
 
 # Contributors
-- Melissa Cronenbold - Design, social network, ...
 - Mati (matiusic@gmail.com) - Programming, structure, design, ... (if anything goes wrong, it's totally my fault)
 
 # License
