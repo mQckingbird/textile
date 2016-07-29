@@ -48,10 +48,10 @@ We are seeking for help to anyone who wanna help us translating just a few lines
 
 # Math
 Yes, we do like science. Mostly the science which requires a lot of math. Oh boy, what's out there it's mindblowing, and we have the pattern thanks to maths.
-Textile supports LaTeX, you can write the mathmatical expression in realtime ([I uploaded a repo about this](https://github.com/matikbird/mathjax-atom-directive) and [these guys (mathjax-electron)](https://github.com/nteract/mathjax-electron/) and MathJax helped me a lot to achieve this).
+Textile supports LaTeX, you can write the mathmatical expression in realtime ([I uploaded a repo about this](https://github.com/matikbird/mathjax-atom-directive) and [these guys (mathjax-electron)](https://github.com/nteract/mathjax-electron/) and MathJax had helped me a lot to achieve this).
 
 # Export
-Currently, Textile can deploy your articles or complete tree of project into:
+Currently, Textile can deploy your articles or complete tree of your project into:
 - PDF
 - EPUB
 - TXT
