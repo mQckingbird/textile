@@ -1,14 +1,14 @@
 <h1 align="center">
   <br>
-  <a href="https://matikbird.github.io/textiled/"><img src="https://matikbird.github.io/textiled/textile_logo_app.png" alt="Textile" width="200"></a>
+  <a href="https://matikbird.github.io/textile/"><img src="https://matikbird.github.io/textile/textile_logo_app.png" alt="Textile" width="200"></a>
   <br>
   Textile App
 </h1>
-<h4 align="center">Where books are built<br><a href="https://matikbird.github.io/textiled/">https://matikbird.github.io/textiled/</a></h4>
+<h4 align="center">Where books are built<br><a href="https://matikbird.github.io/textile/">https://matikbird.github.io/textile/</a></h4>
 ### Words can cross dimensions
 This project is under very active development. We are doing everything we can, as fast we can & as best as possible, to deliver a powerful software. We've released a very early alpha (I know you won't call it that) as a public open source project. This is about books, folks. It can't be close.
 
-You can download the Windows (.exe) & Linux (.deb) and try it out <a href="https://matikbird.github.io/textiled/">here</a>.
+You can download the Windows (.exe) & Linux (.deb) and try it out <a href="https://matikbird.github.io/textile/">here</a>.
 <p align="center">
   <img src="http://i.imgur.com/q7mnZw4.jpg" alt="Textile Screenshot" align="center">
 </p>
@@ -20,8 +20,8 @@ Pay attention.
 
 #### You can help in our cause. «¿Do you need a hand? I have two»
 ```
-$ git clone https://github.com/matikbird/textiled
-$ cd textiled
+$ git clone https://github.com/matikbird/textile
+$ cd textile
 $ npm install
 ```
 
