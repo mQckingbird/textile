@@ -17,6 +17,7 @@ You can download the Windows (.exe) & Linux (.deb) and try it out <a href="https
 We are doing this for free, just for the sake of making something really cool out of nowhere.
 
 #### Develop Textile yourself
+«¿Do you need a hand? I have two»
 ```
 $ git clone https://github.com/matikbird/textiled
 $ cd textiled
