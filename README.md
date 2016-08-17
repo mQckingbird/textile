@@ -70,7 +70,7 @@ We do not track nor sends information to anywhere.
 Your work it's safe out of the line.
 
 # Contributors
-- Mati (matiusic@gmail.com - @matikbird)
+- Mati (dev@matikbird.com - @matikbird)
 - Demian (@dgfc)
 
 
