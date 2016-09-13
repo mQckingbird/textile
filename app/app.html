@@ -225,13 +225,13 @@
     window.$ = window.jQuery = require('./express/jquery.js');
     const MediumEditor = require('medium-editor');
    
-    const epubGenerator = require('./node_modules/epub-generator/index.js');
+    const epubGenerator = require('epub-generator');
     const remote = require('electron').remote;
     const {BrowserWindow} = remote;
     const appt = remote.app;
     const dialog = remote.dialog;
     const fs = require('fs');
-    const export_txt = require('./node_modules/html-to-text/index.js');
+    const export_txt = require('html-to-text');
     const HtmlDocx =  require('html-docx-js');
    const MathJaxx = require('mathjax-electron');
    
@@ -242,7 +242,7 @@
   
     require('./express/angular.js');
     require('./express/angular-pouch.js');
-    require('./node_modules/angular-perfect-scrollbar-2/dist/index.js');
+    require('angular-perfect-scrollbar-2');
     require('./express/angular-animate.min.js');
     require('./express/angular-aria.min.js');
     require('./express/angular-messages.min.js');
