@@ -39,7 +39,7 @@ To package the app for Windows, Linux & Mac, do this:
 ```
 $ npm run release
 ```
-To select the platform
+Target the platform
 ```
 $ npm run release -- «platform»
 ```
