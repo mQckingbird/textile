@@ -71,7 +71,6 @@ Your work it's safe out of the line.
 
 # Contributors
 - Mati (dev@matikbird.com - @matikbird)
-- Demian (@dgfc)
 
 
 # License
