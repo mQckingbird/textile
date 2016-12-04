@@ -11,6 +11,7 @@
 [![AppVeyor Build Status](https://img.shields.io/appveyor/ci/astorije/lounge/master.svg?label=windows+build)](https://ci.appveyor.com/project/astorije/lounge/branch/master)
 [![Dependencies Status](https://img.shields.io/david/thelounge/lounge.svg)](https://david-dm.org/thelounge/lounge)
 [![Developer Dependencies Status](https://img.shields.io/david/dev/thelounge/lounge.svg)](https://david-dm.org/thelounge/lounge?type=dev)
+
 This project is under very active development. We are doing everything we can, as fast we can & as best as possible, to deliver a powerful software. We've released a very early alpha (I know you won't call it that) as a public open source project. This is about books, folks. It can't be close.
 
 You can download the Windows (.exe) & Linux (.deb) and try it out <a href="https://matikbird.github.io/textile/">here</a>.
