@@ -9,8 +9,6 @@
 [![npm version](https://img.shields.io/npm/v/thelounge.svg)](https://www.npmjs.org/package/thelounge)
 [![Travis CI Build Status](https://img.shields.io/travis/thelounge/lounge/master.svg?label=linux+build)](https://travis-ci.org/thelounge/lounge)
 [![AppVeyor Build Status](https://img.shields.io/appveyor/ci/astorije/lounge/master.svg?label=windows+build)](https://ci.appveyor.com/project/astorije/lounge/branch/master)
-[![Dependencies Status](https://img.shields.io/david/thelounge/lounge.svg)](https://david-dm.org/thelounge/lounge)
-[![Developer Dependencies Status](https://img.shields.io/david/dev/thelounge/lounge.svg)](https://david-dm.org/thelounge/lounge?type=dev)
 
 This project is under very active development. We are doing everything we can, as fast we can & as best as possible, to deliver a powerful software. We've released a very early alpha (I know you won't call it that) as a public open source project. This is about books, folks. It can't be close.
 
@@ -67,21 +65,5 @@ Currently, Textile can deploy your articles or complete tree of your project int
 - DOCX
 - EPUB3
 
-# Sync
-Even though our Android & iOS app's are not yet ready, we're working hard so you can see it yourself.<br>
-Database NoSQL [PouchDB](https://github.com/pouchdb/pouchdb) & [CouchDB](http://couchdb.apache.org/).
-
-# Privacy
-We do not track nor sends information to anywhere.
-Your work it's safe out of the line.
-
-# Contributors
-- Mati (fork@matikbird.com - @matikbird)
-
-
 # License
 GPL.
-
-# Final words
-Thanks.
-You all rock.
