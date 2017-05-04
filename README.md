@@ -4,7 +4,7 @@
   <br>
   Textile App
 </h1>
-<h4 align="center">Where books are built<br><a href="https://matikbird.github.io/textile/">https://matikbird.github.io/textile/</a></h4>
+<h4 align="center">Where books are built<br><a href="http://textile.run">textile.run</a></h4>
 ### Words can cross dimensions
 
 This project is under very active development. We are doing everything we can, as fast we can & as best as possible, to deliver a powerful software. We've released a very early alpha (I know you won't call it that) as a public open source project. This is about books, folks. It can't be close.
