@@ -4,8 +4,9 @@
   <br>
   Textile App
 </h1>
-<h4 align="center">Where books are built<br><a href="https://matikbird.github.io/textile/">https://matikbird.github.io/textile/</a></h4>
+<h4 align="center">Where books are built<br><a href="http://textile.run">textile.run</a></h4>
 ### Words can cross dimensions
+
 This project is under very active development. We are doing everything we can, as fast we can & as best as possible, to deliver a powerful software. We've released a very early alpha (I know you won't call it that) as a public open source project. This is about books, folks. It can't be close.
 
 You can download the Windows (.exe) & Linux (.deb) and try it out <a href="https://matikbird.github.io/textile/">here</a>.
@@ -50,7 +51,7 @@ We are seeking for help to anyone who wanna help us translating just a few lines
 
 # Math
 Yes, we do like science. Mostly the science which requires a lot of math. Oh boy, what's out there it's mindblowing, and we have the pattern thanks to maths.
-Textile supports LaTeX, you can write the mathmatical expression in realtime ([I uploaded a repo about this](https://github.com/matikbird/mathjax-atom-directive) and [these guys (mathjax-electron)](https://github.com/nteract/mathjax-electron/) and MathJax had helped me a lot to achieve this).
+Textile supports LaTeX, you can write the mathmatical expression in realtime ([I wrote a little plugin in a new repository](https://github.com/matikbird/mathjax-atom-directive).
 
 # Export
 Currently, Textile can deploy your articles or complete tree of your project into:
@@ -61,21 +62,5 @@ Currently, Textile can deploy your articles or complete tree of your project int
 - DOCX
 - EPUB3
 
-# Sync
-Even though our Android & iOS app's are not yet ready, we're working hard so you can see it yourself.<br>
-Database NoSQL [PouchDB](https://github.com/pouchdb/pouchdb) & [CouchDB](http://couchdb.apache.org/).
-
-# Privacy
-We do not track nor sends information to anywhere.
-Your work it's safe out of the line.
-
-# Contributors
-- Mati (dev@matikbird.com - @matikbird)
-
-
 # License
 GPL.
-
-# Final words
-Thanks.
-You all rock.
