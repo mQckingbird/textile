@@ -297,3 +297,4 @@ var k = window.btoa(m);
 
 // Set the background image property, including the encoding type header
 background.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
+

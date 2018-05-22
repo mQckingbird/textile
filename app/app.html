@@ -131,9 +131,9 @@
                 <span flex></span>
 
           
-                         <md-button ng-click="Math(tab)" class="whitewhite nopadding" aria-label="Math">
+                      <!--  <md-button ng-click="Math(tab)" class="whitewhite nopadding" aria-label="Math">
                              <ng-md-icon icon="functions" style="width: 24px; height: 24px;"></ng-md-icon>
-                          </md-button>
+                          </md-button> -->
                           <md-button ng-click="removeTab(tab)" ng-disabled="tabs.length <= 1" class="whitewhite nopadding whitewhite" aria-label="Eliminar">
                              <ng-md-icon icon="delete" style="width: 24px; height: 24px;"></ng-md-icon>
                           </md-button>
@@ -143,7 +143,7 @@
                                                <ng-md-icon md-menu-origin icon="archive" style="width: 24px; height: 24px;"></ng-md-icon>
                                    </md-button>
                             <md-menu-content width="4">
-                              <md-menu-item ng-click="PDF_Single()">
+                              <!--<md-menu-item ng-click="PDF_Single()">
                                 <md-button ng-click="ctrl.announceClick($index)" aria-label="PDF">
                                     <div layout="row" flex>
                                       <p flex>{{ 'ARTICLE_AS_PDF' | translate }}</p>
@@ -161,6 +161,7 @@
                                     </div>
                                 </md-button>
                               </md-menu-item>
+                              -->
                               <md-menu-item>
                                 <md-button ng-click="TXT_Single()" aria-label="txt">
                                     <div layout="row" flex>
@@ -184,8 +185,8 @@
                    </div>
             </md-toolbar>
               <div class="demo-tab tab{{tab%4}}" style="padding: 25px;">
-              <div id="paddingeditor">
-              <div id="{{tab._id}}" ng-model="tab.content" ng-model-options="{ debounce: 2000 }" save="saveData(tab._id)" medium-editor class="medium-editor paper">
+              <div id="paddingeditor typewriter">
+              <div medium-editor id="{{tab._id}}" ng-model="tab.content" ng-model-options="{ debounce: 2000 }" save="saveData(tab._id)" class="medium-editor paper" tabindex="0" ng-keydown="typeWriter($event);" >
                 
      </div>         </div>
 
@@ -197,7 +198,7 @@
           </md-tabs>
 
           <div id="projectactual" style="display:none;"></div>
-            <div class="lock-size" layout="row" layout-align="center center">
+          <!--  <div class="lock-size" layout="row" layout-align="center center">
   <md-fab-speed-dial md-open="false" md-direction="up"
                      class="md-fling fabspeeddial">
     <md-fab-trigger >
@@ -213,42 +214,44 @@
     </md-fab-actions>
   </md-fab-speed-dial>
 </div>
-        </md-content>
+     -->   </md-content>
        
         </section>
         </div>
-    </div>
+    </div> 
 <st-blurred-dialog-overlay></st-blurred-dialog-overlay>
 
 </body>
  <script type="text/javascript">
-    window.$ = window.jQuery = require('./express/jquery.js');
-    const MediumEditor = require('medium-editor');
-   
-    const epubGenerator = require('epub-generator');
     const remote = require('electron').remote;
     const {BrowserWindow} = remote;
     const appt = remote.app;
     const dialog = remote.dialog;
     const fs = require('fs');
-    const export_txt = require('html-to-text');
-    const HtmlDocx =  require('html-docx-js');
-   const MathJaxx = require('mathjax-electron');
-   
-  </script>
-
-  <script src="express/pouchdb.min.js"></script> 
-  <script src="express/pouchdb.find.js"></script><script>
-  
+    window.$ = window.jQuery = require('./express/jquery.js');
+    require('./express/lodash.js');
     require('./express/angular.js');
-    require('./express/angular-pouch.js');
+        require('./express/angular-pouch.js');
     require('angular-perfect-scrollbar-2');
+
     require('./express/angular-animate.min.js');
     require('./express/angular-aria.min.js');
     require('./express/angular-messages.min.js');
     require('./express/angular-material.js');
     require('./express/angular-material-icons.min.js');
     require('./express/angular-translate.min.js');
+    const MediumEditor = require('medium-editor');
+    const export_txt = require('html-to-text');
+   /* const MathJaxx = require('mathjax-electron');
+   const debugMenu = require('debug-menu');
+debugMenu.install(); */
+  </script>
+
+  <script src="express/pouchdb.min.js"></script> 
+  <script src="express/pouchdb.find.js"></script><script>
+  
+    
+
     require('./express/funciones.js');
     require('./express/redact.min.js');
 </script>

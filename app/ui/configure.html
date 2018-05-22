@@ -60,8 +60,12 @@
                                 </div>
                               </div>
                               </md-input-container>
-                      
-   
+                      <md-input-container class="md-block">
+                              <md-switch ng-model="ArrayTextile.typewriter" aria-label="Audio" ng-change="typewriter(ArrayTextile.typewriter)">
+            {{ 'TYPEWRITER_AUDIO_SWITCH' | translate }}
+  </md-switch>
+                              </md-input-container>
+
           </div>
       <div ng-show="isSet(2)">
           <h1>{{ 'DATABASES' | translate }}</h1>
