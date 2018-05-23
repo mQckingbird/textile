@@ -1,0 +1,42 @@
+{
+  "name": "textile",
+  "productName": "Textile",
+  "description": "Save your work across time.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Matías",
+    "email": "dev@textile.run"
+  },
+  "contributors": {
+    "name": "Mati",
+    "email": "dev@textile.run"
+  },
+  "copyright": "© 2016 Textile",
+  "main": "express/redact.min.js",
+  "dependencies": {
+    "angular-perfect-scrollbar-2": "^1.2.4",
+    "html-to-text": "^2.1.3",
+    "mathjax-electron": "^1.0.0",
+    "medium-editor": "5.18.0",
+    "trianglify": "^0.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matikbird/textile.git"
+  },
+  "keywords": [
+    "write",
+    "words",
+    "multiplatform",
+    "app",
+    "software",
+    "books",
+    "articles",
+    "work"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matikbird/textile/issues"
+  },
+  "homepage": "https://github.com/matikbird/textile#readme"
+}

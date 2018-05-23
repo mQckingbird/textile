@@ -1,0 +1,335 @@
+
+<!DOCTYPE html><html class=''>
+<head><script src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/mahmoudzohdi/pen/qOrjvO" />
+<link href='https://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'><link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+<style class="cp-pen-styles">body {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  background-image: url(http://www.hdwallpap.com/wp-content/uploads/2014/05/blue_purple_triangle_surface_abstract.jpg);
+  background-size: cover;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.note {
+  color: #fff;
+  margin-bottom: 20px;
+  display: block;
+  font-weight: 600;
+}
+
+.page-holder.active form {
+  margin-top: 60px;
+  opacity: 0;
+}
+
+.error-msg {
+  width: 150px;
+  opacity: 0;
+  position: absolute;
+  bottom: 3px;
+  left: 100%;
+  display: inline-block;
+  background-color: red;
+  padding: 4px 30px 5px;
+  margin: 0;
+  margin-left: 15px;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 3px;
+  cursor: default;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.error-msg.active {
+  opacity: 1;
+}
+
+form {
+  width: 300px;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  opacity: 1;
+}
+form .input-holder {
+  width: 300px;
+  height: 35px;
+  margin-bottom: 14px;
+  display: block;
+  position: relative;
+  /* background-color: rgba(255,255,255,0.1); */
+  border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+}
+form .input-holder .input-title {
+  position: absolute;
+  font-size: 16px;
+  bottom: 7px;
+  left: 0;
+  color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+form .input-holder input {
+  width: 300px;
+  height: 35px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+form .input-holder input:focus {
+  outline: none;
+}
+form .input-holder.submit {
+  background-color: #fff;
+  border: none;
+  border-radius: 3px;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+form .input-holder.submit input {
+  font-weight: 600;
+  color: #91008D;
+}
+form .input-holder.active .input-title {
+  bottom: 100%;
+  font-size: 10px;
+  margin-bottom: -6px;
+}
+form .upload-image {
+  width: 300px;
+  text-align: left;
+}
+form .upload-image .input-title {
+  color: #fff;
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+form .upload-image .input-holder, form .upload-image .preview-img-holder {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  margin-left: 50px;
+  margin-top: 10px;
+  cursor: pointer;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+form .upload-image .input-holder:hover, form .upload-image .preview-img-holder:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+form .upload-image .input-holder .icon, form .upload-image .preview-img-holder .icon {
+  display: inline-block;
+  font-size: 30px;
+  color: #fff;
+  margin-top: 25px;
+}
+
+.preview-img-upload .preview-img-holder {
+  width: 80px;
+  height: 80px;
+  display: none !important;
+  border: none !important;
+  position: relative;
+  margin-bottom: 14px;
+}
+.preview-img-upload .preview-img-holder .remove-image {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 11px;
+  padding: 5px 0;
+  box-sizing: border-box;
+}
+.preview-img-upload .preview-img-holder .img-holder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.preview-img-upload .preview-img-holder .img-holder img {
+  width: 100%;
+  min-height: 100%;
+}
+.preview-img-upload.active .preview-img-holder {
+  display: inline-block !important;
+}
+.preview-img-upload.active .input-holder {
+  display: none;
+}
+
+.welcome-msg {
+  margin-top: 30px;
+  position: fixed;
+  left: -500%;
+}
+.welcome-msg .user-img {
+  width: 120px;
+  height: 120px;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: 50px;
+}
+.welcome-msg .user-img img {
+  width: 100%;
+  min-height: 100%;
+}
+.welcome-msg .paragraph-message {
+  color: #fff;
+  font-size: 30px;
+  opacity: 0;
+  margin-top: 50px;
+}
+.welcome-msg .paragraph-message .username {
+  font-weight: 700;
+}
+.welcome-msg.active {
+  position: static;
+}
+.welcome-msg.active .user-img, .welcome-msg.active .paragraph-message {
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.welcome-msg.active .user-img {
+  margin-top: 0;
+}
+.welcome-msg.active .paragraph-message {
+  margin-top: 15px;
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+</style></head><body>
+
+<div class="page-holder">
+  <!-- Registration form-->
+  <form>
+    <label class="note">fill all fields & click on Register button</label>
+    <label class="input-holder full-name"><span class="input-title">Full Name*</span>
+      <input type="text"/>
+    </label>
+    <label class="input-holder"><span class="input-title">Username*</span>
+      <input type="text"/>
+    </label>
+    <label class="input-holder"><span class="input-title">Password*</span>
+      <input type="password"/>
+    </label>
+    <label class="input-holder"><span class="input-title">Confirm Password*</span>
+      <input type="password"/>
+    </label>
+    <div class="upload-image preview-img-upload"><span class="input-title">Profile Picture*</span>
+      <div class="preview-img-holder"><span class="remove-image fa fa-times"></span>
+        <div class="img-holder"><img class="preview-img" src="" alt="image" draggable="false"/></div>
+      </div>
+      <label class="input-holder"><span class="icon fa fa-cloud-upload"></span>
+        <input class="hide" type="file" accept="image/*"/>
+      </label>
+    </div>
+    <label class="input-holder submit">
+      <input type="submit" value="Register"/>
+    </label>
+    <p class="error-msg">please fill all fields</p>
+  </form>
+  <!-- Welcome Message-->
+  <div class="welcome-msg">
+    <div class="user-img"><img src="" alt="image" draggable="false"/></div>
+    <p class="paragraph-message">Welcome, <span class="username"></span></p>
+  </div>
+</div>
+<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script >// add class active to input on focus and remove this class on blur
+$('input').focus(function(){
+		$(this).parent().addClass('active');
+}).blur(function() {
+		if ($(this).val() == '') {
+			$(this).parent().removeClass('active');
+		}
+});
+
+// preview Image Before Upload
+function previewImageBeforeUpload() {
+	var element = $('.preview-img-upload');
+	var reader;
+
+	function readURL(input, selector) {
+		if (input.files && input.files[0]) {
+			reader = new FileReader();
+			reader.onload = function(e) {
+				selector
+					.parents('.preview-img-upload')
+					.addClass('active')
+					.find('.preview-img')
+					.attr('src', e.target.result);
+			};
+			reader.readAsDataURL(input.files[0]);
+		}
+	}
+
+	function removeImage() {
+		element
+			.find('.remove-image')
+			.click(function() {
+				$(this)
+					.parents('.preview-img-upload').removeClass('active').find('.preview-img').attr('src', '');
+				$(this).parents('.preview-img-upload').find('input').val('');
+				});
+		}
+		removeImage();
+
+	$(document.body).on('change', '.preview-img-upload input', function() {
+				readURL(this, $(this));
+		});
+
+}
+previewImageBeforeUpload();
+
+// form submit
+$('.submit').click(function(e){
+	e.preventDefault();
+	var isEmpty = $('input').filter(function(){
+						return this.value === "";
+				});
+	if(isEmpty.length){
+		$('.error-msg').addClass('active');
+	}else{
+		
+			var userName = $('.full-name input').val();
+			var userImage = $('.preview-img').attr('src');
+
+			$('.welcome-msg .user-img img').attr('src', userImage);
+			$('.welcome-msg .paragraph-message .username').text(userName);
+
+		$('.page-holder').addClass('active');
+		setTimeout(function(){
+			$('form').hide();
+			$('.welcome-msg').addClass('active');
+		}, 1000);
+	}
+	
+});
+
+// hide error message if input keyup
+$('input').change(function(){
+	$('.error-msg').removeClass('active');
+});
+//# sourceURL=pen.js
+</script>
+</body></html>

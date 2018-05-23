@@ -1,0 +1,267 @@
+
+<!DOCTYPE html><html class=''>
+<head>
+<title>Ediciones LeE - Logo</title>
+
+<style>*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -70px;
+  margin-top: -70px;
+  width: 140px;
+  height: 140px;
+  overflow: visible;
+}
+.logo__mainGroup {
+  -webkit-transform-origin: 35px 35px;
+          transform-origin: 35px 35px;
+  -webkit-animation: mainGroupAnim 9s 1s infinite;
+          animation: mainGroupAnim 9s 1s infinite;
+}
+.logo__grayGroup {
+  -webkit-animation: grayGroupAnim 9s 1s infinite;
+          animation: grayGroupAnim 9s 1s infinite;
+}
+.logo__square {
+  stroke: #9E9E9E;
+  stroke-dasharray: 280, 280;
+  stroke-dashoffset: 280;
+  -webkit-animation: square-anim 9s 1s infinite;
+          animation: square-anim 9s 1s infinite;
+}
+.logo__line {
+  stroke: #9E9E9E;
+  stroke-dasharray: 70, 70;
+  stroke-dashoffset: 70;
+}
+.logo__line-1 {
+  -webkit-animation: line-anim 9s 0.4375s infinite;
+          animation: line-anim 9s 0.4375s infinite;
+}
+.logo__line-2 {
+  -webkit-animation: line-anim 9s 0.55s infinite;
+          animation: line-anim 9s 0.55s infinite;
+}
+.logo__line-3 {
+  -webkit-animation: line-anim 9s 0.6625s infinite;
+          animation: line-anim 9s 0.6625s infinite;
+}
+.logo__line-4 {
+  -webkit-animation: line-anim 9s 0.775s infinite;
+          animation: line-anim 9s 0.775s infinite;
+}
+.logo__line-5 {
+  -webkit-animation: line-anim 9s 0.8875s infinite;
+          animation: line-anim 9s 0.8875s infinite;
+}
+.logo__line-6 {
+  -webkit-animation: line-anim 9s 1s infinite;
+          animation: line-anim 9s 1s infinite;
+}
+.logo__stroke {
+  stroke: #D41E48;
+  stroke-dasharray: 600, 600;
+  stroke-dashoffset: 600;
+  -webkit-animation: strokeAnim 9s 1s ease-in-out infinite;
+          animation: strokeAnim 9s 1s ease-in-out infinite;
+}
+.logo__fill {
+  stroke: #D41E48;
+  stroke-dasharray: 290, 290;
+  stroke-dashoffset: 290;
+  -webkit-animation: fillAnim 9s 1s infinite;
+          animation: fillAnim 9s 1s infinite;
+}
+
+@-webkit-keyframes square-anim {
+  12% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes square-anim {
+  12% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes line-anim {
+  19% {
+    stroke-dashoffset: 70;
+  }
+  26% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes line-anim {
+  19% {
+    stroke-dashoffset: 70;
+  }
+  26% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes mainGroupAnim {
+  26% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  33% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  95% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    opacity: 0;
+  }
+}
+@keyframes mainGroupAnim {
+  26% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  33% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  95% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes grayGroupAnim {
+  33% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes grayGroupAnim {
+  33% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes strokeAnim {
+  33% {
+    stroke-dashoffset: 600;
+  }
+  66% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes strokeAnim {
+  33% {
+    stroke-dashoffset: 600;
+  }
+  66% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes fillAnim {
+  66% {
+    stroke-dashoffset: 290;
+  }
+  85% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fillAnim {
+  66% {
+    stroke-dashoffset: 290;
+  }
+  85% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+</style></head><body>
+<svg class="logo" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70 70" version="1.1">
+  <g class="logo__mainGroup">
+    <g class="logo__grayGroup">
+      <path class="logo__square" fill="none" stroke-width="1" d="M0,0 0,70 70,70 70,0z"/>
+      <path class="logo__line logo__line-1" fill="none" stroke-width="1" d="M10,0 10,70"/>
+      <path class="logo__line logo__line-2" fill="none" stroke-width="1" d="M20,0 20,70"/>
+      <path class="logo__line logo__line-3" fill="none" stroke-width="1" d="M30,0 30,70"/>
+      <path class="logo__line logo__line-4" fill="none" stroke-width="1" d="M40,0 40,70"/>
+      <path class="logo__line logo__line-5" fill="none" stroke-width="1" d="M50,0 50,70"/>
+      <path class="logo__line logo__line-6" fill="none" stroke-width="1" d="M60,0 60,70"/>
+      <path class="logo__line logo__line-1" fill="none" stroke-width="1" d="M0,10 70,10"/>
+      <path class="logo__line logo__line-2" fill="none" stroke-width="1" d="M0,20 70,20"/>
+      <path class="logo__line logo__line-3" fill="none" stroke-width="1" d="M0,30 70,30"/>
+      <path class="logo__line logo__line-4" fill="none" stroke-width="1" d="M0,40 70,40"/>
+      <path class="logo__line logo__line-5" fill="none" stroke-width="1" d="M0,50 70,50"/>
+      <path class="logo__line logo__line-6" fill="none" stroke-width="1" d="M0,60 70,60"/>
+    </g>
+    <g class="logo__colorGroup">
+      <path class="logo__stroke" fill="none" stroke-width="1" d="M0,70 0,40 50,40 50,60 60,60 60,30 40,30 40,10 10,10 10,20 30,20 30,30 0,30 0,0 50,0 50,20 70,20 70,70 40,70 40,50 10,50 10,60 30,60 30,70 0,70" />
+      <path class="logo__fill" fill="none" stroke-width="10" d="M30,25 5,25 5,5 45,5 45,25 65,25 65,65 45,65 45,45 5,45 5,65 30,65" />
+    </g>
+  </g>
+</svg>
+
+
+</body></html>

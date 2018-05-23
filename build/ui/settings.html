@@ -1,0 +1,139 @@
+<div layout="vertical" ng-controller="BlurCtrl" layout-fill style="height: 100vh;">
+<div class='blur-modal' layout="row" layout-fill flex>
+
+ <section layout="row" role="main" flex>
+      <md-sidenav class="md-sidenav-left md-whiteframe-z2 settingsnav" role="sidenav" md-component-id="left" md-is-locked-open="$mdMedia('gt-xs')" style="overflow:hidden;" flex="33">
+  
+    <md-content role="navigation" style="background-color: transparent;">
+
+
+      <md-list>
+         <md-list-item ng-click="setTab(1)" ng-class="{ active: isSet(1) }">
+           <ng-md-icon icon="settings_applications"></ng-md-icon>
+          <p class="md-body-2">{{ 'SETTINGS' | translate }}</p>
+          <span flex></span>
+          <ng-md-icon icon="chevron_right"></ng-md-icon>
+        </md-list-item>
+        <md-list-item ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
+           <ng-md-icon icon="save"></ng-md-icon>
+          <p class="md-body-2">{{ 'EXPORT' | translate }}</p>
+          <span flex></span>
+          <ng-md-icon icon="chevron_right"></ng-md-icon>
+        </md-list-item>
+      </md-list>
+
+    </md-content>
+  </md-sidenav> 
+  <md-content flex class="md-padding settingsproject">
+        <div ng-show="isSet(1)">
+  
+           <h1>{{ 'PREFERENCES' | translate }}</h1>
+           <p class="absolutemargin">{{ 'CONF_PROJECT' | translate }}</p>
+                       <md-input-container class="md-block">
+                   <input ng-model="dialogData.title" type="text" placeholder="Título de proyecto" ng-required="true" ng-change="SetIn('title')" id="title">
+                 </md-input-container>
+                 <md-input-container class="md-block">
+    <label>{{ 'DESCRIPTION' | translate }}</label>
+    <textarea ng-model="dialogData.descripcion" required md-maxlength="150" style="min-height:120px" ng-change="SetIn('descripcion')" id="descripcion"></textarea>
+                 </md-input-container>
+<md-input-container class="md-block">
+       <md-button class="md-default md-raised" ng-click="trashproject(dialogData)" >
+          {{ 'DELETE_PROJECT' | translate }}
+      </md-button>
+    </md-input-container>
+   
+          </div>
+
+        <div ng-show="isSet(3)">
+
+          <h1>{{ 'EXPORT' | translate }}</h1>
+          <p class="absolutemargin">{{ 'EXPORT_SUBTITLE' | translate }}</p>
+             <md-list>
+
+   <md-list-item class="md-3-line" style="margin-top:10px;">
+        <ng-md-icon icon="picture_as_pdf" size="30" style="margin:10px 20px 0 0;"></ng-md-icon>
+        <div class="md-list-item-text">
+          <h3>PDF</h3>
+          <p>
+           {{ 'PDF_WHAT' | translate }}
+          </p>
+        </div>
+        <md-divider inset=""></md-divider>
+         <md-button ng-click="PDFProject()" class="md-icon-button nopadding">
+                             <ng-md-icon icon="file_download" style="width: 24px; height: 24px;"></ng-md-icon>
+                          </md-button>
+      </md-list-item>
+
+      <md-list-item class="md-3-line" style="margin-top:10px;">
+        <ng-md-icon icon="import_contacts" size="30" style="margin:10px 20px 0 0;"></ng-md-icon>
+        <div class="md-list-item-text">
+          <h3>EPUB</h3>
+          <p>
+            {{ 'EPUB_WHAT' | translate }}
+          </p>
+        </div>
+        <md-divider inset=""></md-divider>
+         <md-button ng-click="Epub2Project()" class="md-icon-button nopadding">
+                             <ng-md-icon icon="file_download" style="width: 24px; height: 24px;"></ng-md-icon>
+                          </md-button>
+      </md-list-item>
+      <md-list-item class="md-3-line" style="margin-top:10px;">
+        <ng-md-icon icon="spellcheck" size="30" style="margin:10px 20px 0 0;"></ng-md-icon>
+        <div class="md-list-item-text">
+          <h3>TXT</h3>
+          <p>
+            {{ 'TXT_WHAT' | translate }}
+          </p>
+        </div>
+        <md-divider inset=""></md-divider>
+         <md-button ng-click="Txt2Project()" class="md-icon-button nopadding">
+                             <ng-md-icon icon="file_download" style="width: 24px; height: 24px;"></ng-md-icon>
+                          </md-button>
+      </md-list-item>
+      <md-list-item class="md-3-line" style="margin-top:10px;">
+        <ng-md-icon icon="web" size="30" style="margin:10px 20px 0 0;"></ng-md-icon>
+        <div class="md-list-item-text">
+          <h3>HTML</h3>
+          <p>
+            {{ 'HTML_WHAT' | translate }}
+          </p>
+        </div>
+        <md-divider inset=""></md-divider>
+         <md-button ng-click="HTML2Project()" class="md-icon-button nopadding">
+                             <ng-md-icon icon="file_download" style="width: 24px; height: 24px;"></ng-md-icon>
+                          </md-button>
+      </md-list-item>
+
+    <md-list-item class="md-3-line" style="margin-top:10px;">
+        <ng-md-icon icon="office" size="30" style="margin:10px 20px 0 0;"></ng-md-icon>
+        <div class="md-list-item-text">
+          <h3>Docx</h3>
+          <p>
+            {{ 'DOCX_WHAT' | translate }}
+          </p>
+        </div>
+        <md-divider inset=""></md-divider>
+         <md-button ng-click="Docx2Project()" class="md-icon-button nopadding">
+                             <ng-md-icon icon="file_download" style="width: 24px; height: 24px;"></ng-md-icon>
+                          </md-button>
+      </md-list-item>
+      <md-list-item class="md-3-line" style="margin-top:10px;">
+        <ng-md-icon icon="work" size="30" style="margin:10px 20px 0 0;"></ng-md-icon>
+        <div class="md-list-item-text">
+          <h3>EPUB 3</h3>
+          <p>
+            {{ 'EPUB3_WHAT' | translate }}
+          </p>
+        </div>
+        <md-divider inset=""></md-divider>
+         <md-button ng-click="Epub32Project()" class="md-icon-button nopadding">
+                             <ng-md-icon icon="file_download" style="width: 24px; height: 24px;"></ng-md-icon>
+                          </md-button>
+      </md-list-item>
+    </md-list>
+      </div>
+      </md-content>
+    </section>
+
+</div>
+</div>
