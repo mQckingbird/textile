@@ -1,0 +1,90 @@
+
+<!DOCTYPE html><html lang='en' class=''>
+<head><script src='//static.codepen.io/assets/editor/live/console_runner-ce3034e6bde3912cc25f83cccb7caa2b0f976196f2f2d52303a462c826d54a73.js'></script><script src='//static.codepen.io/assets/editor/live/css_live_reload_init-890dc39bb89183d4642d58b1ae5376a0193342f9aed88ea04330dc14c8d52f55.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/allistairlee/pen/GdeRVQ" />
+
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css'><link rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.12/css/all.css'>
+<style class="cp-pen-styles">@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+body {
+  font-family: "Source Sans Pro";
+  color: #333333;
+}
+
+.editor {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toolbar {
+  display: block;
+  width: 100%;
+  height: 38px;
+  border: 1px solid #999;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  background: #eee;
+}
+
+.toolbar a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  color: #555;
+}
+
+.content {
+  width: 500px;
+  height: auto;
+  max-width: 100%;
+  padding: 15px;
+  border: 1px solid #999;
+  border-radius: 0 0 5px 5px;
+  overflow: auto;
+}
+
+/* footer layout */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  text-align: center;
+}
+</style></head><body>
+<div class="container-fluid">
+  <div class="editor">
+    <h2 style="text-align: center; font-weight: bold"><p>Word Editor</p></h2>
+    <div class="toolbar">
+      <a href='#' data-role='bold'><i class="fas fa-bold"></i></a>
+      <a href='#' data-role='italic'><i class="fas fa-italic"></i></a>
+      <a href='#' data-role='underline'><i class="fas fa-underline"></i></a>
+      <a href='#' data-role='subscript'><i class="fas fa-subscript"></i></a>
+      <a href='#' data-role='superscript'><i class="fas fa-superscript"></i></a>
+    </div>
+    <div class="content" contenteditable>
+      <p><b>DO NOT</b> touch this.</p>
+      <p><i>Ouch!</i> Stop hitting me.</p>
+      <p>This is a very <u>important</u> information.</p>
+      <p>Carbon dioxide is also known as CO<sub>2</sub>.</p>
+      <p>2<sup>2</sup> equals 4.</p>
+    </div>
+  </div>
+</div>
+<footer>
+  <p>Coded with <i class="fas fa-heart" style="color: red;"></i> &amp; <i class="fas fa-coffee"></i></p>
+</footer>
+<script src='//static.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+<script >$('.toolbar a').on('click', function(e) {
+  e.preventDefault();
+  document.execCommand($(this).data('role'), false);
+});
+//# sourceURL=pen.js
+</script>
+</body></html>
