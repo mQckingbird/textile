@@ -1,0 +1,263 @@
+
+<!DOCTYPE html><html lang='en' class=''>
+<head><script src='//static.codepen.io/assets/editor/live/console_runner-ce3034e6bde3912cc25f83cccb7caa2b0f976196f2f2d52303a462c826d54a73.js'></script><script src='//static.codepen.io/assets/editor/live/css_live_reload_init-890dc39bb89183d4642d58b1ae5376a0193342f9aed88ea04330dc14c8d52f55.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/osvaldas/pen/xWNLXy" />
+
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
+<style class="cp-pen-styles">*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: #FAF3DD;
+  padding: 2em;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+}
+
+.tabs {
+  position: relative;
+}
+.tabs:not(.--jsfied) {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.tabs .--hidden {
+  display: none;
+}
+.tabs a,
+.tabs button {
+  width: 100%;
+  height: 100%;
+  display: block;
+  font-size: 1em;
+  line-height: 1.2;
+  text-align: center;
+  color: #FAF3DD;
+  background-color: transparent;
+}
+.tabs .-primary {
+  display: flex;
+}
+.tabs .-primary > li {
+  flex-grow: 1;
+  background-color: #D51E49;
+}
+.tabs .-primary > li + li {
+  border-left: 1px solid #b61a3e;
+}
+.tabs .-primary > li > a,
+.tabs .-primary > li > button {
+  white-space: nowrap;
+  padding: 1em 0.6em;
+  box-shadow: inset 0 -0.2em 0 #b61a3e;
+}
+.tabs .-primary > li > a:hover,
+.tabs .-primary > li > button:hover {
+  background-color: #b61a3e;
+}
+.tabs .-primary > li > a:active,
+.tabs .-primary > li > button:active {
+  background-color: #961534;
+}
+.tabs .-primary .-more {
+  background-color: #b61a3e;
+}
+.tabs .-primary .-more > button span {
+  display: inline-block;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+.tabs.--show-secondary .-primary .-more > button span {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.tabs .-secondary {
+  max-width: 100%;
+  min-width: 10em;
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.3);
+  -webkit-animation: nav-secondary 0.2s;
+          animation: nav-secondary 0.2s;
+}
+.tabs .-secondary li {
+  border-top: 1px solid #D51E49;
+  background-color: #b61a3e;
+}
+.tabs .-secondary a,
+.tabs .-secondary button {
+  padding: 0.6em;
+}
+.tabs .-secondary a:hover,
+.tabs .-secondary button:hover {
+  background-color: #961534;
+}
+.tabs .-secondary a:active,
+.tabs .-secondary button:active {
+  background-color: #D51E49;
+}
+.tabs.--show-secondary .-secondary {
+  display: block;
+}
+
+@-webkit-keyframes nav-secondary {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-1em);
+            transform: translateY(-1em);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes nav-secondary {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-1em);
+            transform: translateY(-1em);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+</style></head><body>
+<!--
+  Related blog post:
+  https://css-tricks.com/container-adapting-tabs-with-more-button/
+-->
+
+<nav class="tabs">
+  <ul class="-primary">
+    <li>
+      <a target="_blank" href="https://en.wikipedia.org/wiki/Falkenberg">
+        Falkenberg
+      </a>
+    <li>
+      <a target="_blank" href="https://en.wikipedia.org/wiki/Braga">
+        Braga
+      </a>
+    <li>
+      <a target="_blank" href="https://en.wikipedia.org/wiki/Stockholm">
+        Stockholm
+      </a>
+    <li>
+      <a target="_blank" href="https://en.wikipedia.org/wiki/Trnava">
+        Trnava
+      </a>
+    <li>
+      <a target="_blank" href="https://en.wikipedia.org/wiki/Plovdiv">
+        Plovdiv
+      </a>
+    <li>
+      <a target="_blank" href="https://en.wikipedia.org/wiki/Klaip%C4%97da">
+        Klaipėda
+      </a>
+    <li>
+      <a target="_blank" href="https://en.wikipedia.org/wiki/Punta_Cana">
+        Punta Cana
+      </a>
+    <li>
+      <a target="_blank" href="https://en.wikipedia.org/wiki/Lisbon">
+        Lisbon
+      </a>
+  </ul>
+</nav>
+<script src='//static.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
+<script >/*
+  Consider using these polyfills to broaden browser support:
+    — https://www.npmjs.com/package/classlist-polyfill
+    — https://www.npmjs.com/package/nodelist-foreach-polyfill
+*/
+
+var container = document.querySelector('.tabs');
+var primary = container.querySelector('.-primary');
+var primaryItems = container.querySelectorAll('.-primary > li:not(.-more)');
+container.classList.add('--jsfied');
+
+// insert "more" button and duplicate the list
+
+primary.insertAdjacentHTML('beforeend', '\n  <li class="-more">\n    <button type="button" aria-haspopup="true" aria-expanded="false">\n      More <span>&darr;</span>\n    </button>\n    <ul class="-secondary">\n      ' + primary.innerHTML + '\n    </ul>\n  </li>\n');
+var secondary = container.querySelector('.-secondary');
+var secondaryItems = secondary.querySelectorAll('li');
+var allItems = container.querySelectorAll('li');
+var moreLi = primary.querySelector('.-more');
+var moreBtn = moreLi.querySelector('button');
+moreBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  container.classList.toggle('--show-secondary');
+  moreBtn.setAttribute('aria-expanded', container.classList.contains('--show-secondary'));
+});
+
+// adapt tabs
+
+var doAdapt = function doAdapt() {
+  // reveal all items for the calculation
+  allItems.forEach(function (item) {
+    item.classList.remove('--hidden');
+  });
+
+  // hide items that won't fit in the Primary
+  var stopWidth = moreBtn.offsetWidth;
+  var hiddenItems = [];
+  var primaryWidth = primary.offsetWidth;
+  primaryItems.forEach(function (item, i) {
+    if (primaryWidth >= stopWidth + item.offsetWidth) {
+      stopWidth += item.offsetWidth;
+    } else {
+      item.classList.add('--hidden');
+      hiddenItems.push(i);
+    }
+  });
+
+  // toggle the visibility of More button and items in Secondary
+  if (!hiddenItems.length) {
+    moreLi.classList.add('--hidden');
+    container.classList.remove('--show-secondary');
+    moreBtn.setAttribute('aria-expanded', false);
+  } else {
+    secondaryItems.forEach(function (item, i) {
+      if (!hiddenItems.includes(i)) {
+        item.classList.add('--hidden');
+      }
+    });
+  }
+};
+
+doAdapt(); // adapt immediately on load
+window.addEventListener('resize', doAdapt); // adapt on window resize
+
+// hide Secondary on the outside click
+
+document.addEventListener('click', function (e) {
+  var el = e.target;
+  while (el) {if (window.CP.shouldStopExecution(1)){break;}
+    if (el === secondary || el === moreBtn) {
+      return;
+    }
+    el = el.parentNode;
+  }
+window.CP.exitedLoop(1);
+
+  container.classList.remove('--show-secondary');
+  moreBtn.setAttribute('aria-expanded', false);
+});
+//# sourceURL=pen.js
+</script>
+</body></html>
