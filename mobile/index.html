@@ -1,0 +1,639 @@
+
+<!DOCTYPE html><html lang='en' class=''>
+<head><script src='//static.codepen.io/assets/editor/live/console_runner-ce3034e6bde3912cc25f83cccb7caa2b0f976196f2f2d52303a462c826d54a73.js'></script><script src='//static.codepen.io/assets/editor/live/css_live_reload_init-890dc39bb89183d4642d58b1ae5376a0193342f9aed88ea04330dc14c8d52f55.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/fbrz/pen/bNdMwZ?editors=1000" />
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0, user-scalable = no">
+
+<style class="cp-pen-styles">@import url(https://fonts.googleapis.com/css?family=Lato);
+body {
+  font-family: Lato;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+/* phone */
+#phone {
+  width: 310px;
+  height: 640px;
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  margin: 0 -285px;
+  background: #fff;
+}
+
+#screen {
+  width: 290px;
+  height: 520px;
+  border: 1px solid #ccc;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -260px -145px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#home {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #ccc;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin: 0 -18px;
+  border-radius: 50%;
+}
+
+#speaker {
+  width: 50px;
+  height: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  position: absolute;
+  left: 50%;
+  top: 25px;
+  margin: 0 -25px;
+}
+
+#header {
+  height: 46px;
+  background: #353541;
+  position: relative;
+  z-index: 30;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+#header:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.pullmenu-icon {
+  width: 16px;
+  height: 2px;
+  background: #FFF;
+  position: absolute;
+  right: 20px;
+  bottom: 27px;
+  transition: opacity .2s ease-in-out;
+}
+.pullmenu-icon:after {
+  content: '';
+  width: 8px;
+  height: 2px;
+  background: #FFF;
+  position: absolute;
+  top: 10px;
+  left: 4px;
+}
+.pullmenu-icon:before {
+  content: '';
+  width: 16px;
+  height: 2px;
+  background: #FFF;
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+.pullmenu-icon.hide {
+  opacity: 0;
+}
+
+#title {
+  height: 46px;
+}
+
+#menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 3000px;
+  position: absolute;
+  top: 50%;
+  margin: -15px 0px;
+  transition: -webkit-transform .2s ease-out;
+  transition: transform .2s ease-out;
+  transition: transform .2s ease-out, -webkit-transform .2s ease-out;
+}
+#menu li {
+  color: #FFF;
+  font-size: 15px;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0 20px;
+  opacity: 0;
+  transition: opacity .2s ease-out;
+}
+#menu li.show {
+  opacity: 1 !important;
+}
+#menu li.reload {
+  margin-left: 200px;
+  position: relative;
+  top: 6px;
+  transition: opacity 0s ease-out;
+}
+#menu.show li {
+  opacity: .2;
+}
+#menu.notrans {
+  transition: none;
+}
+
+.loader-icon {
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  border-bottom-color: transparent;
+  display: block;
+}
+.loader-icon.anim {
+  -webkit-animation: loader 1s infinite linear;
+          animation: loader 1s infinite linear;
+}
+
+#loader .loader-icon {
+  border: 2px solid #353541;
+  border-bottom-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  margin: -8px;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+.pages {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  transition: opacity .2s linear;
+  z-index: 29;
+  position: absolute;
+  width: 318px;
+  height: 100%;
+}
+.pages.hide {
+  transition: opacity .1s linear;
+  opacity: 0;
+}
+
+.page {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 472px;
+  display: none;
+  padding-right: 15px;
+}
+
+#latest {
+  display: block;
+}
+
+.back1 {
+  background: -webkit-linear-gradient(-50deg, #ae93bb, #a63d71);
+}
+
+.back2 {
+  background: -webkit-linear-gradient(-50deg, #97c794, #12656c);
+}
+
+.back3 {
+  background: -webkit-linear-gradient(-50deg, #808fb6, #373f52);
+}
+
+.back4 {
+  background: -webkit-linear-gradient(-50deg, #caa285, #c0bf3c);
+}
+
+.back5 {
+  background: -webkit-linear-gradient(-50deg, #93b0bb, #3d7aa6);
+}
+
+.back6 {
+  background: -webkit-linear-gradient(-50deg, #bba793, #a65d3d);
+}
+
+.back7 {
+  background: -webkit-linear-gradient(-50deg, #9d93bb, #6659a1);
+}
+
+.back8 {
+  background: -webkit-linear-gradient(-50deg, #afabb2, #695f64);
+}
+
+.back9 {
+  background: -webkit-linear-gradient(-50deg, #a589b0, #d35c5c);
+}
+
+.back10 {
+  background: -webkit-linear-gradient(-50deg, #93bb95, #5a774e);
+}
+
+.back11 {
+  background: -webkit-linear-gradient(-50deg, #bde5d0, #123c6c);
+}
+
+.box {
+  height: 116px;
+  position: relative;
+  width: 50%;
+  float: left;
+}
+.box.right {
+  float: right;
+}
+.box.tall {
+  height: 232px;
+}
+.box.wide {
+  width: 100%;
+}
+.box.small {
+  width: 100%;
+  height: 70px;
+}
+.box.hero {
+  height: 240px;
+  width: 100%;
+}
+.box.hero span {
+  font-size: 23px;
+}
+.box span {
+  position: absolute;
+  color: #fff;
+  font-size: 15px;
+  bottom: 0;
+  left: 0;
+  text-transform: uppercase;
+  padding: 25px 25px;
+  font-weight: 600;
+}
+
+#about {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  font-size: 11px;
+}
+#about div {
+  position: relative;
+  left: -6px;
+  top: 50%;
+  margin-top: -30px;
+}
+#about span {
+  font-size: 20px;
+}
+
+#text {
+  position: absolute;
+  height: 640px;
+  left: 50%;
+  top: 50px;
+  margin: 0px 75px;
+  color: #353541;
+}
+#text h1 {
+  margin: 0;
+  font-size: 70px;
+  line-height: 60px;
+  text-transform: uppercase;
+}
+#text h2 {
+  font-size: 23px;
+  margin: 0;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+#text h3 {
+  opacity: 0.3;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+#pullmenu-icon {
+  width: 40px;
+  height: 5px;
+  background: #353541;
+  margin-top: 69px;
+  position: relative;
+  margin-bottom: 40px;
+  left: 6px;
+}
+#pullmenu-icon:before {
+  width: 40px;
+  height: 5px;
+  background: #353541;
+  content: '';
+  position: absolute;
+  top: 10px;
+}
+#pullmenu-icon:after {
+  width: 22px;
+  height: 5px;
+  background: #353541;
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 9px;
+}
+
+#coolors {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  text-decoration: none;
+  color: #353541;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+</style></head><body>
+<div id="phone">
+  <div id="screen">
+    <div id="header">
+      <ul id="menu">
+        <li>Latest Movies</uli>
+        <li>Best Movies</uli>
+        <li>Archive</uli>
+        <li>About</li>
+        <li class="reload"><i class="loader-icon"></i></li>
+      </ul>
+      <div class="pullmenu-icon"></div>
+    </div>
+    <div id="loader"><i class="loader-icon anim"></i></div>
+<div class="pages">
+    <div class="page back2" id="about">
+      <div>
+        <span>Pullmenu</span><br/>Menu interaction concept<br/>by @_fbrz
+      </div>
+    </div>
+    <div class="page" id="latest">
+      <div class="box hero back11">
+        <span>Interstellar</span>
+      </div>
+      <div class="box back2">
+        <span>Dracula untold</span>
+      </div>
+      <div class="box back9 right tall">
+        <span>The guardians of the galaxy</span>
+      </div>
+      <div class="box back4">
+        <span>The judge</span>
+      </div>
+      <div class="box back3">
+        <span>Frank</span>
+      </div>
+      <div class="box back6 right">
+        <span>Big Hero 6</span>
+      </div>
+      <div class="box back8 wide">
+        <span>Hunger Games</span>
+      </div>
+    </div>
+    <div class="page" id="best">
+      <div class="box wide back11">
+        <span>Boyhood</span>
+      </div>
+      <div class="box wide back2">
+        <span>The lego movie</span>
+      </div>
+      <div class="box wide back9">
+        <span>The Grand Budapest Hotel</span>
+      </div>
+      <div class="box wide back4">
+        <span>Dawn Of The Planet Of The Apes</span>
+      </div>
+      <div class="box wide back3">
+        <span>Nightcrawler</span>
+      </div>
+      <div class="box wide back6">
+        <span>Big Hero 6</span>
+      </div>
+      <div class="box wide back8">
+        <span>Hunger Games</span>
+      </div>
+    </div>
+    <div class="page" id="archive">
+      <div class="box small back11">
+        <span>The Wizard of Oz</span>
+      </div>
+      <div class="box small back2">
+        <span>Citizen Kane</span>
+      </div>
+      <div class="box small back9">
+        <span>The Godfather</span>
+      </div>
+      <div class="box small back4">
+        <span>The Third Man</span>
+      </div>
+      <div class="box small back3">
+        <span>A Hard Day's Night</span>
+      </div>
+      <div class="box small back6">
+        <span>Modern Times</span>
+      </div>
+      <div class="box small back8">
+        <span>All About Eve</span>
+      </div>
+      <div class="box small back7">
+        <span>Metropolis</span>
+      </div>
+      <div class="box small back5">
+        <span>Singin' in the Rain</span>
+      </div>
+      <div class="box small back10">
+        <span>King Kong</span>
+      </div>
+      <div class="box small back1">
+        <span>Sunset Boulevard</span>
+      </div>
+    </div>
+</div>
+  </div>
+  <div id="home"></div>
+  <div id="speaker"></div>
+</div>
+
+<div id="text">
+  <div id="pullmenu-icon"></div>
+  <h1>pull<br/>menu</h1>
+  <h2>Menu<br/>interaction<br/>concept</h2>
+  <h3>* Pull down that icon!</h3>
+  <h3>** Mobile demo: bit.ly/1CI6OEs</h3>
+</div>
+
+<a href="http://coolors.co" target="_blank" id="coolors">Coolors ></a><script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script >//sorry for the mess
+var current_index = 0, 
+    index, 
+    menu, 
+    menu_items_count, 
+    mouse_down, 
+    mouse_start_y, 
+    pull_step, 
+    total_pull = 80, 
+    release = 40,
+    pull_release = total_pull + release;
+
+$(document).on('selectstart', false);
+
+$(document).ready(function(){
+	$("#menu li").each(function(i,e){
+   	$(this).attr("data-index",i) 
+	});
+  
+	//
+	menu = $("#menu").html();
+	menu_items_count = $("#menu li").length;
+	pull_step = total_pull/(menu_items_count-1);
+	//
+  
+
+  $("#menu").css("transform","translate3d("+getItemX(0)+"px,0,0)");
+  $("#menu li").removeClass("show");
+  $("#menu li").eq(0).addClass("show");
+});
+
+$("#header").mousedown(function(e){
+	
+	//
+	mouse_down = true;
+	mouse_start_y = e.pageY;
+	//
+  
+	if(index == menu_items_count-1) {
+		index = 0;
+	} else {
+		var $item = $("#menu li").eq(index);
+		$("#menu").html(menu);
+		$("#menu li").eq($item.attr("data-index")).remove();
+		$item.prependTo($("#menu"));
+		$("#menu li").eq(0).addClass("show");
+		$("#menu").addClass("notrans");
+		$("#menu").css("transform","translate3d("+getItemX(0)+"px,0,0)");
+    }
+});
+
+$(document).mouseup(function(e){
+	if(mouse_down) {
+	//
+	mouse_down = false;
+	$("#header").animate({height: 46},300);
+	$("#menu").removeClass("show");
+	$(".pullmenu-icon").removeClass("hide");
+	//
+  
+  
+	
+	if(index>0) {
+
+		if(index==menu_items_count-1) {
+      
+      	$(".reload i").addClass("anim");
+      
+      	setTimeout(function(){
+				$("#menu li").removeClass("show");
+				$("#menu").css("transform","translate3d("+getItemX(0)+"px,0,0)");
+				$(".reload i").removeClass("anim");
+				
+				setTimeout(function(){
+          
+					$("#menu li").eq(0).addClass("show");
+				},500);
+			},1000);
+    
+      } else {
+
+        current_index = index;
+
+        $(".pages").addClass("hide");
+
+        setTimeout(function(){
+
+          $(".pages").removeClass("hide");
+          $(".page").hide();
+
+          switch($("#menu li").eq(index).attr("data-index")) {
+            case '0': $("#latest").show(); break;
+            case '1': $("#best").show(); break;
+            case '2': $("#archive").show(); break;
+            case '3': $("#about").show(); break;
+            }
+        },1000);
+		}
+	}
+  }
+});
+
+$(document).mousemove(function(e){
+	
+	$("#menu").removeClass("notrans");
+	
+	if(mouse_down) {
+		
+		var diff = Math.max(0, e.pageY - mouse_start_y);
+		if(diff>pull_release) diff = pull_release + (diff-pull_release)/(diff*0.01);
+	
+		$("#header").height(46+diff);
+
+		index = Math.max(0,Math.min(menu_items_count-2, Math.floor((diff-release)/pull_step)));
+		if(diff>pull_release+pull_step*2) index = menu_items_count-1;
+    
+		if(diff>release) {
+			$("#menu").addClass("show");
+			$(".pullmenu-icon").addClass("hide");
+		} else {
+      	$("#menu").removeClass("show");
+			$(".pullmenu-icon").removeClass("hide");
+		}
+    
+		$("#menu").css("transform","translate3d("+getItemX(index)+"px,0,0)");
+		$("#menu li").removeClass("show");
+		$("#menu li").eq(index).addClass("show");
+    
+		$(".loader-icon").css("transform", "rotate("+(diff*20)+"deg)");
+	}
+});
+
+var getItemX = function(index){
+	var $item = $("#menu li").eq(index);
+	var item_offset = $item.offset().left;
+	var item_width = $item.outerWidth();
+	var menu_offset = $("#menu").offset().left;
+	var screen_width = $("#screen").width();
+	return (menu_offset-item_offset)+(screen_width-item_width)/2;
+};
+</script>
+</body></html>
